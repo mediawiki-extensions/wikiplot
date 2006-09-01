@@ -1,5 +1,7 @@
 <?php
-
+/*
+This is an example of how to use plot.class.php
+*/
 header("Content-type: image/png");
 
 include("plot.class.php");
