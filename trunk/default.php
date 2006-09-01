@@ -8,7 +8,6 @@ include("plot.class.php");
 
 $Plot = new Plot;
 
-//Playing with SVN... I'll revert this later.. :)
 $G = new Graph;
 $G->Exp = "0.002x^3";
 $G->Color = array(0,0,255);
