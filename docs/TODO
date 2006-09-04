@@ -9,3 +9,4 @@ TODO:
 - plot.class.php Add version/revision number to GetHash()
 - plot.class.php Implementat ShortNumber()
 - plot.class.php Finish implementation of Get*GridSpace()
+- WikiPlot.php	 Write specification for WikiML
