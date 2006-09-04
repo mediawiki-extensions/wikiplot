@@ -1,4 +1,4 @@
-kwrite<?php
+<?php
 /*
 Copyright (C) 2006 Jonas F. Jensen.
 
