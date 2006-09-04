@@ -9,4 +9,5 @@ TODO:
 - plot.class.php Add version/revision number to GetHash()
 - plot.class.php Implementat ShortNumber()
 - plot.class.php Finish implementation of Get*GridSpace()
+- plot.class.php Draw labels on grid, even if axes isn't on the image
 - WikiPlot.php	 Write specification for WikiML
