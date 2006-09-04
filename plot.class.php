@@ -1,4 +1,4 @@
-<?php
+kwrite<?php
 /*
 Copyright (C) 2006 Jonas F. Jensen.
 
@@ -13,9 +13,6 @@ include('evalmath.class.php');
 
 class Plot
 {
-	//TODO: Add constructor
-	//TODO: Consider catch functionallity
-
 	//Graphs to plot
 	var $Graphs;
 
@@ -111,9 +108,6 @@ class Plot
 				//Get some NewCoordinat*
 				$NewCoordinatX = $this->GetCoordinatX($ImageX);
 				$NewCoordinatY = $m->evaluate("f(".$NewCoordinatX.") ");
-
-				//TODO: calculate distance, if distance extrem don't draw line, this should fix use of tan(x)
-				//Maybe if some coordinat = error or null or 0.. somehow
 
 				//Draw a line from OldCoordinat*
 				imageline(
@@ -238,7 +232,7 @@ class Plot
 	function DrawYGrid(&$ImageResource)
 	{
 		//Get grid width
-		$YGridSpace =  45;//TODO:$this->GetYGridSpace();
+		$YGridSpace =  $this->GetYGridSpace();
 		
 		//Get color to draw with
 		$Color = imagecolorexact($ImageResource,$this->GridColor[0],$this->GridColor[1],$this->GridColor[2]);

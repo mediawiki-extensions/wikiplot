@@ -1,0 +1,11 @@
+Known bugs:
+- Can't plot "tan(x)" correctly, this can be fixed if we use a loop between MinX and MaxX instead of a loop between 0 and ImageWidth. But this could very well have bad effects on performance.
+
+TODO:
+- plot.class.php Fix lacking entries in GetHash() (See TODO's in source).
+- plot.class.php Test a loop between MinX and MaxX instead of 0 and ImageWidth (See known bugs).
+- plot.class.php Create constructor
+- plot.class.php Documentat classes with phpdocu
+- plot.class.php Add version/revision number to GetHash()
+- plot.class.php Implementat ShortNumber()
+- plot.class.php Finish implementation of Get*GridSpace()

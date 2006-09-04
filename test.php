@@ -19,9 +19,10 @@ $G1->Color = array(0,255,0);
 $G1->Label = "test1";
 
 $G2 = new Graph;
-$G2->Exp = "sin(x*0.3)*50+0.05x^2+100";
+//$G2->Exp = "sin(x*0.3)*50+0.05x^2+100";
+$G2->Exp = "tan(x/4)*5";
 $G2->Color = array(255,0,0);
-$G2->Label = "Sjov graf";
+$G2->Label = "Tan(x)";
 
 $Plot->Graphs = array($G,$G1,$G2);
 
