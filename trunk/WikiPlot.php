@@ -20,6 +20,13 @@ function RenderWikiPlot( $input, $argv, $parser = null  ) {
 	$output .= " <br/> and the value for the arg 'argument' is " . $argv["argument"];
 	$output .= " <br/> and the value for the arg 'argument2' is: " . $argv["argument2"];
 
+/*
+WikiML specification
+<plot grid="true" caption="Caption text" axis="true" xspan="-10;10" yspan="-10;10" height="20" width="20" gridspace="x;y" captionfont="5" gridfont="1" gridcolor="200,200,200">
+<graph color="0,0,255" font="3">5x^3</graph>
+<graph color="0,255,0" font="3">2x^2</graph>
+</plot>
+*/
 
 	//Render as wikitext:
 	$localParser = new Parser();
