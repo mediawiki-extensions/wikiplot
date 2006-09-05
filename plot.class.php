@@ -1,6 +1,6 @@
 <?php
 /*
-Copyright (C) 2006 Jonas F. Jensen.
+Copyright (C) 2006 by the WikiPlot project authors (See http://code.google.com/p/WikiPlot).
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
@@ -47,6 +47,7 @@ class Plot
 		$Hash .= "X:" . $this->MinX . "_" . $this->MaxX;
 		$Hash .= "Y:" . $this->MinY . "_" . $this->MaxY;
 		$Hash .= "E:" . $this->EnableGrid;
+		$Hash .= "V:" . "$LastChangedRevision$";
 		foreach($this->Graphs as $key => $S)
 		{
 			$Hash .= "G:" . $key. "_" . $S; 
@@ -69,9 +70,6 @@ class Plot
 		//Fill the image with white
 		imagefill($ImageResource,0,0,imagecolorexact($ImageResource,255,255,255));
 
-		//Draw caption
-		$this->DrawCaption($ImageResource);
-
 		//If grid is enabled
 		if($this->EnableGrid)
 		{
@@ -83,6 +81,9 @@ class Plot
 		{
 			$this->DrawAxis($ImageResource);
 		}
+		
+		//Draw caption
+		$this->DrawCaption($ImageResource);
 
 		//Y position for Labels relative to Image
 		$LabelY = 5;
@@ -155,9 +156,20 @@ class Plot
 	}
 
 	//Rewrite numbers into something short 1.000.000 -> 1E6
-	function ShortNumber($Number)
+	function ShortNumber($Number, $MaxLen = 7)
 	{
-		return floor($Number); //TODO: return something right.
+		//If $Number isn't too long return it as it is
+		if(strlen($Number)<=$MaxLen)
+		{
+			return $Number;
+		}else{
+			//Convert to scientific notation
+			$NSci = sprintf("%e",$Number);
+
+			//Follwing hack prevents the function from showing too many decimals
+			$ArrNSci = split($NSci,"e");
+			return round($ArrNSci[0],$MaxLen-5) . "e" . $ArrNSci[1];
+		}
 	}
 
 	//Returns X grid spaces from parameter or calculated 
@@ -166,13 +178,10 @@ class Plot
 		if($this->XGridSpace==null)
 		{
 			//Text length max 7 when using $this->ShortNumber();
-			$XTextLen = 7*imagefontwidth($this->GridFont);
+			$XTextLen = 7*imagefontwidth($this->GridFont) + 10;
 
-			//Number of X-Grids
-			$XGrids = $this->Width/($XTextLen+10);
-
-			//Space between grids in coordinate space
-			$XGridSpace = (($this->MaxX-$this->MinX)-fmod(($this->MaxX-$this->MinX),$XGrids))/$XGrids;
+			//Convering to coordinate space
+			return (($this->MaxX-$this->MinX)/$this->Width)*$XTextLen;
 		}else{
 			$XGridSpace = $this->XGridSpace;
 		}
@@ -184,7 +193,11 @@ class Plot
 	{
 		if($this->YGridSpace==null)
 		{
-			//TODO: Create following code, try to match X distance
+			//Text length max 7 when using $this->ShortNumber();
+			$XTextLen = 7*imagefontwidth($this->GridFont) + 10;
+
+			//Convering to coordinate space
+			return (($this->MaxX-$this->MinX)/$this->Width)*$XTextLen;
 		}else{
 			$YGridSpace = $this->YGridSpace;
 		}
@@ -224,7 +237,24 @@ class Plot
 				$this->GetImageY($this->MaxY),
 				$Color);
 
-			imagestring($ImageResource,$this->GridFont,$this->GetImageX($XCordinate)+2,$this->GetImageY(0)+2,$this->ShortNumber($XCordinate),$Black);
+			//If Y axes is not on the image (working in ImageSpace not CoordinatSpace)
+			$Y = $this->GetImageY(0);
+			if($Y > ($this->Height-imagefontheight($this->GridFont)))
+			{
+				$Y = $this->Height-(imagefontheight($this->GridFont)+2);
+			}else{
+				if($Y<0)
+				{
+					$Y = 0;
+				}
+			}
+			imagestring(
+				$ImageResource,
+				$this->GridFont,
+				$this->GetImageX($XCordinate)+2,
+				$Y+2,
+				$this->ShortNumber($XCordinate),
+				$Black);
 		}
 	}
 	
@@ -254,7 +284,24 @@ class Plot
 				$this->GetImageY($YCordinate),
 				$Color);
 
-			imagestring($ImageResource,$this->GridFont,$this->GetImageX(0)+2,$this->GetImageY($YCordinate)+2,$this->ShortNumber($YCordinate),$Black);
+			//If X axes is not on the image (working in ImageSpace not CoordinatSpace)
+			$X = $this->GetImageX(0);
+			if($X > ($this->Width-(imagefontwidth($this->GridFont)*7)))
+			{
+				$X = $this->Width-(imagefontwidth($this->GridFont)*7+2);
+			}else{ 
+				if($X<0)
+				{
+					$X = 0;
+				}
+			}
+			imagestring(
+				$ImageResource,
+				$this->GridFont,
+				$X+2,
+				$this->GetImageY($YCordinate)+2,
+				$this->ShortNumber($YCordinate),
+				$Black);
 		}
 	}
 

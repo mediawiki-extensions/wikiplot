@@ -33,8 +33,8 @@ $Plot->Height = 500;
 
 $Plot->MinX = -250;
 $Plot->MaxX = 250;
-$Plot->MinY = -500;
-$Plot->MaxY = 500;
+$Plot->MinY = -250;
+$Plot->MaxY = 250;
 
 //$Plot->DisplayPlot();
 
