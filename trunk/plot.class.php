@@ -18,7 +18,7 @@ class Plot
 
 	//Caption, leave if no caption wanted
 	var $Caption = null;
-	var $CaptionFont = 5; //TODO: add to Hash()
+	var $CaptionFont = 5;
 
 	//Options for output Image
 	var $Width = 100;
