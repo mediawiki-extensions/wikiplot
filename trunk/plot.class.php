@@ -31,22 +31,26 @@ class Plot
 	var $MaxY = 100;
 
 	//Options for grid
-	var $EnableAxis = true; //TODO: add to Hash()
+	var $EnableAxis = true;
 	var $EnableGrid = true;
-	var $GridColor = array(240,240,240); //TODO: add to Hash()
-	var $GridFont = 1; //TODO: add to hash()
-	var $XGridSpace = null; //TODO: add to hash()
-	var $YGridSpace = null; //TODO: add to hash()
+	var $GridColor = array(240,240,240);
+	var $GridFont = 1;
+	var $XGridSpace = null;
+	var $YGridSpace = null;
 
 	//Get hashsum of the plot
 	function GetHash()
 	{
 		$Hash  = "C:" . $this->Caption;
+		$Hash  = "F:" . $this->CaptionFont;
 		$Hash .= "W:" . $this->Width;
 		$Hash .= "H:" . $this->Height;
 		$Hash .= "X:" . $this->MinX . "_" . $this->MaxX;
 		$Hash .= "Y:" . $this->MinY . "_" . $this->MaxY;
 		$Hash .= "E:" . $this->EnableGrid;
+		$Hash .= "A:" . $this->EnableAxis;
+		$Hash .= "G:" . $this->EnableGrid . "_" . $this->GridColor . "_" . $this->GridFont;
+		$Hash .= "S:" . $this->XGridSpace . "_" . $this->YGridSpace;
 		$Hash .= "V:" . "$LastChangedRevision$";
 		foreach($this->Graphs as $key => $S)
 		{
