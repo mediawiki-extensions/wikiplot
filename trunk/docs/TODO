@@ -7,3 +7,15 @@ TODO:
 - plot.class.php Create constructor
 - plot.class.php Documentate classes with phpdocu
 - WikiPlot.php	 Implementation of WikiML specification
+
+Documentation:
+- plot.class.php Documentate source code.
+- WikiPlot.php	 Documentate source code.
+- 		 Write specification for WikiML extension
+-		 Write User guide for WikiML extension
+-		 Write Administrator guide for WikiPlot
+			- Annoncement mailinglist
+			- Installation
+			- Updates
+			- Catching
+-		Write developers guide to plot.class.php
