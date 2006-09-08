@@ -1,4 +1,12 @@
 <?
+/**
+* Evalution of expressions
+* 
+* Safe evaluation of mathematical expressions
+* 
+* @package WikiPlot
+* @subpackage PlotClass
+*/
 
 /*
 ================================================================================

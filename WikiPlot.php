@@ -1,5 +1,7 @@
 <?php
-
+/**
+* @package WikiPlot
+*/
 $wgExtensionFunctions[] = "wfWikiPlotExtension";
 
 function wfExampleExtension() {

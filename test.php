@@ -1,6 +1,14 @@
 <?php
-/*
-This is an example of how to use plot.class.php
+/**
+Example/Test
+
+This is an example/test of how to use plot.class.php
+
+* @package WikiPlot
+* @subpackage PlotClass
+* @license http://www.gnu.org/licenses/gpl.txt GNU General Public License
+* @author WikiPlot development team.
+* @copyright Copyright 2006, WikiPlot development team.
 */
 header("Content-type: image/png");
 
