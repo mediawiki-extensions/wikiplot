@@ -6,6 +6,7 @@ TODO:
 - plot.class.php Test a loop between MinX and MaxX instead of 0 and ImageWidth (See known bugs).
 - plot.class.php Create constructor
 - plot.class.php Documentate classes with phpdocu
+- plot.class.php Support other formats in SaveAs and DisplayPlot
 - WikiPlot.php	 Implementation of WikiML specification
 
 Documentation:
