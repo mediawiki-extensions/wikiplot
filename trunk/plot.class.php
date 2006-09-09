@@ -215,7 +215,29 @@ class Plot
 	*/
 	var $YGridSpace = null;
 
-	//Get hashsum of the plot
+	/**
+	*Generate hash
+	*
+	*Generates a uniqe hashsum (md5) for the plot, generated from all parameters.
+	*
+	*@uses $Caption
+	*@uses $CaptionFont
+	*@uses $Width
+	*@uses $Height
+	*@uses $MinX
+	*@uses $MaxX
+	*@uses $MinY
+	*@uses $MaxY
+	*@uses $EnableGrid
+	*@uses $GridColor
+	*@uses $GridFont
+	*@uses $EnableAxis
+	*@uses $XGridSpace
+	*@uses $YGridSpace
+	*@uses $Graphs
+	*@uses Graph::GetHash()
+	*@return string
+	*/
 	function GetHash()
 	{
 		$Hash  = "C:" . $this->Caption;
@@ -224,19 +246,48 @@ class Plot
 		$Hash .= "H:" . $this->Height;
 		$Hash .= "X:" . $this->MinX . "_" . $this->MaxX;
 		$Hash .= "Y:" . $this->MinY . "_" . $this->MaxY;
-		$Hash .= "E:" . $this->EnableGrid;
 		$Hash .= "A:" . $this->EnableAxis;
 		$Hash .= "G:" . $this->EnableGrid . "_" . $this->GridColor . "_" . $this->GridFont;
 		$Hash .= "S:" . $this->XGridSpace . "_" . $this->YGridSpace;
 		$Hash .= "V:" . "$LastChangedRevision$";
 		foreach($this->Graphs as $key => $S)
 		{
-			$Hash .= "G:" . $key. "_" . $S; 
+			$Hash .= "G:" . $key. "_" . $S->GetHash(); 
 		}
 		return md5($Hash);
 	}
 
-	//Get ImageResource of the plot
+	/**
+	*Get ImageResource of the plot
+	*
+	*Generates ImageResource representation of the plot.
+	*
+	*@access public
+	*@uses EnableGrid
+	*@uses DrawGrid()
+	*@uses $Width
+	*@uses $Height
+	*@uses $MinX
+	*@uses $MaxX
+	*@uses $MinY
+	*@uses $MaxY
+	*@uses $EnableAxis
+	*@uses DrawAxis()
+	*@uses DrawCaption()
+	*@uses EvalMath
+	*@uses EvalMath::evaluate()
+	*@uses GetCoordinatX()
+	*@uses GetCoordinatY()
+	*@uses GetImageX()
+	*@uses GetImageY()
+	*@uses $Graphs
+	*@uses Graph::$Color
+	*@uses Graph::$LabelFont
+	*@uses Graph::$EnableLabel
+	*@uses Graph::$Label
+	*
+	*@return string
+	*/
 	function DrawPlot()
 	{
 		//Get ImageResource
