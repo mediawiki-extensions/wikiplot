@@ -267,10 +267,6 @@ class Plot
 	*@uses DrawGrid()
 	*@uses $Width
 	*@uses $Height
-	*@uses $MinX
-	*@uses $MaxX
-	*@uses $MinY
-	*@uses $MaxY
 	*@uses $EnableAxis
 	*@uses DrawAxis()
 	*@uses DrawCaption()
@@ -286,7 +282,7 @@ class Plot
 	*@uses Graph::$EnableLabel
 	*@uses Graph::$Label
 	*
-	*@return string
+	*@return ImageResource
 	*/
 	function DrawPlot()
 	{

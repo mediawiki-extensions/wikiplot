@@ -1,9 +1,9 @@
 <?php
 /**
-Example/Test
-
-This is an example/test of how to use plot.class.php
-
+* Example/Test
+* 
+* This is an example/test of how to use plot.class.php
+* 
 * @package WikiPlot
 * @subpackage PlotClass
 * @license http://www.gnu.org/licenses/gpl.txt GNU General Public License
@@ -12,6 +12,12 @@ This is an example/test of how to use plot.class.php
 */
 header("Content-type: image/png");
 
+
+/**
+* Includes plot.class.php for testing
+* 
+* The file tests PlotClass, and must therefor depend on it.
+*/
 include("plot.class.php");
 
 $Plot = new Plot;
