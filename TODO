@@ -20,3 +20,4 @@ Documentation:
 			- Updates
 			- Catching
 -		Write developers guide to plot.class.php
+- ../		Write README, INSTALL, CHANGELOG, LICENSE and add to phpdoc
