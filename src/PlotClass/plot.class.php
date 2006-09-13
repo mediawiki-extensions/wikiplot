@@ -236,7 +236,7 @@ class Plot
 	*@uses $YGridSpace
 	*@uses $Graphs
 	*@uses Graph::GetHash()
-	*@return string
+	*@return string Hash representation of the object.
 	*/
 	function GetHash()
 	{
@@ -282,7 +282,7 @@ class Plot
 	*@uses Graph::$EnableLabel
 	*@uses Graph::$Label
 	*
-	*@return ImageResource
+	*@return ImageResource ImageResource representation of the plot.
 	*/
 	function DrawPlot()
 	{
@@ -367,7 +367,17 @@ class Plot
 		return $ImageResource;
 	}
 
-	//Draw caption to plot
+	/**
+	*Draw caption to ImageResource
+	*
+	*Draws the caption to an ImageResource representation of the plot.
+	*
+	*@access private
+	*@uses $Width
+	*@uses $Caption
+	*@uses $CaptionFont
+	*@param ImageResource &$ImageResource ImageResource representation of the plot.
+	*/
 	function DrawCaption(&$ImageResource)
 	{
 		//Get a black color for caption
@@ -383,7 +393,17 @@ class Plot
 		imagestring($ImageResource,$this->CaptionFont,$X,0,$this->Caption,$Black);
 	}
 
-	//Rewrite numbers into something short 1.000.000 -> 1E6
+	/**
+	*Generates short numbers
+	*
+	*Rewrites numbers into scientific notation, with a certain maximum length.<br>
+	*Example: ShortNumber(501000000) == 5.01e8
+	*
+	*@access private
+	*@param integer $Number The number you with to shorten.
+	*@param integer $MaxLen The maximum length of the output default to 7.
+	*@return string Scientific notation of the given Number at a certain length.
+	*/
 	function ShortNumber($Number, $MaxLen = 7)
 	{
 		//If $Number isn't too long return it as it is
