@@ -33,6 +33,8 @@ include('evalmath.class.php');
 * 
 * Class containing functions to draw plots to an image.
 * 
+* @package WikiPlot
+* @subpackage PlotClass
 * @license http://www.gnu.org/licenses/gpl.txt GNU General Public License
 * @author WikiPlot development team.
 * @copyright Copyright 2006, WikiPlot development team.
@@ -485,7 +487,25 @@ class Plot
 		$this->DrawYGrid($ImageResource);
 	}
 
-	//Draw X grid
+	/**
+	*Draws x-grid
+	*
+	*Drawing X grid on the plot.
+	*
+	*@access private
+	*@uses GetXGridSpace()
+	*@uses $GridColor
+	*@uses $MinX
+	*@uses $MaxX
+	*@uses $MinY
+	*@uses $MaxY
+	*@uses GetImageX()
+	*@uses GetImageY()
+	*@uses $GridFont
+	*@uses $Height
+	*@uses ShortNumber()
+	*@param ImageResource &$ImageResource ImageResource representation of the plot.
+	*/
 	function DrawXGrid(&$ImageResource)
 	{
 		//Get grid width
@@ -532,7 +552,25 @@ class Plot
 		}
 	}
 	
-	//Draw Y grid
+	/**
+	*Draws y-grid
+	*
+	*Drawing y grid on the plot.
+	*
+	*@access private
+	*@uses GetYGridSpace()
+	*@uses $GridColor
+	*@uses $MinX
+	*@uses $MaxX
+	*@uses $MinY
+	*@uses $MaxY
+	*@uses GetImageX()
+	*@uses GetImageY()
+	*@uses $GridFont
+	*@uses $Width
+	*@uses ShortNumber()
+	*@param ImageResource &$ImageResource ImageResource representation of the plot.
+	*/
 	function DrawYGrid(&$ImageResource)
 	{
 		//Get grid width
@@ -579,9 +617,23 @@ class Plot
 		}
 	}
 
-	//Draw axis
+	/**
+	* Draw axis
+	*
+	* Draw both x and y axis to the plot.
+	*
+	*@access private
+	*@uses $MinX
+	*@uses $MaxX
+	*@uses $MinY
+	*@uses $MaxY
+	*@uses GetImageX()
+	*@uses GetImageY()
+	*@param ImageResource &$ImageResource ImageResource representation of the plot.
+	*/
 	function DrawAxis(&$ImageResource)
 	{
+		$Black = imagecolorexact($ImageResource,0,0,0);
 		//Draw X-axis
 		imageline(
 			$ImageResource,
@@ -599,15 +651,23 @@ class Plot
 			$Black);
 	}
 
-	//Display plot as png
-	function DisplayPlot($DisplayAs = "png")
+	/**
+	*Display plot as image
+	*
+	*Displays plot as image on the page. This makes current http-request return an image. You can set the DisplayType to png, gif or jpeg. Defaults to png, gif not recommanded. Note: this changes the current http-request mimetype to the respective image mimetype.
+	*
+	*@access public
+	*@uses DrawPlot()
+	*@param string $DisplayType Type of image to view (png|jpeg|gif).
+	*/
+	function DisplayPlot($DisplayType = "png")
 	{
-		if($DisplayAs = "png")
+		if($DisplayType == "png")
 		{
 			header("Content-type: image/png");
 			imagepng($this->DrawPlot());	
 		}
-		elseif($DisplayAs = "gif")
+		elseif($DisplayType == "gif")
 		{
 			header("Content-type: image/gif");
 			imagegif($this->DrawPlot());
@@ -619,13 +679,23 @@ class Plot
 		}
 	}
 
+	/**
+	*Save plot to image
+	*
+	*Saves the plot to an image. You can set the SaveAs to a file type: png, gif or jpeg, defaults to png.
+	*
+	*@access public
+	*@uses DrawPlot()
+	*@param string $Path Path of file to save.
+	*@param string $SaveAs Filetype definition (png|jpeg|gif).
+	*/
 	function SaveAs($Path,$SaveAs = "png")
 	{
-		if($SaveAs = "png")
+		if($SaveAs == "png")
 		{
 			imagepng($this->DrawPlot(),$Path);	
 		}
-		elseif($SaveAs = "gif")
+		elseif($SaveAs == "gif")
 		{
 			imagegif($this->DrawPlot(),$Path);
 		}
@@ -635,45 +705,148 @@ class Plot
 		}
 	}
 	
-	//Scale image position to coordinat position
+	/**
+	* Convert to coordinate space
+	*
+	* Converts an x image position to x coordinate position. Coordinate space may differ from Image space, if Width!= (MaxX-MinX).
+	*
+	*@access private
+	*@uses $MaxX
+	*@uses $MinX
+	*@uses $Width
+	*@param integer $x X image coordinat to be converted.
+	*@return integer Coordiante space representation given parameter.
+	*/
 	function GetCoordinatX($x)
 	{
 		return (($this->MaxX-$this->MinX)/$this->Width)*$x+$this->MinX;
 	}
 
-	//Scale image position to coordinat position
+	/**
+	* Convert to coordinate space
+	*
+	* Converts an y image position to y coordinate position. Coordinate space may differ from Image space, if Height!= (MaxY-MinY).
+	*
+	*@access private
+	*@uses $MaxY
+	*@uses $MinY
+	*@uses $Height
+	*@param integer $y Y image coordinat to be converted.
+	*@return integer Coordiante space representation given parameter.
+	*/
 	function GetCoordinatY($y)
 	{
 		return (($this->MaxY-$this->MinY)/$this->Height)*($this->Height-$y)+$this->MinY;
 	}
 
-	//Scale coordinat position to image position
+	/**
+	* Convert to image space
+	*
+	* Converts an x in coordinate space to x image position. Coordinate space may differ from Image space, if Width!= (MaxX-MinX).
+	*
+	*@access private
+	*@uses $MaxX
+	*@uses $MinX
+	*@uses $Width
+	*@param integer $x X coordinat to be converted.
+	*@return integer Image position representation given parameter.
+	*/
 	function GetImageX($x)
 	{
 		return ($x-$this->MinX)*($this->Width/($this->MaxX-$this->MinX));
 	}
 
-	//Scale coordinat position to image position
+	/**
+	* Convert to image space
+	*
+	* Converts an y in coordinate space to y image position. Coordinate space may differ from Image space, if Height!= (MaxY-MinY).
+	*
+	*@access private
+	*@uses $MaxY
+	*@uses $MinY
+	*@uses $Height
+	*@param integer $y Y coordinat to be converted.
+	*@return integer Image position representation given parameter.
+	*/
 	function GetImageY($y)
 	{
 		return $this->Height-($y-$this->MinY)*($this->Height/($this->MaxY-$this->MinY));
 	}
 }
 
+/**
+* Representation of a graph
+* 
+* Class used to represente graphs on a plot.
+* 
+* @package WikiPlot
+* @subpackage PlotClass
+* @license http://www.gnu.org/licenses/gpl.txt GNU General Public License
+* @author WikiPlot development team.
+* @copyright Copyright 2006, WikiPlot development team.
+*/
 class Graph
 {
-	//The label of the graph
+	/**
+	* Label of graph
+	*
+	* This is the label or legend of the graph and will be shown in the corner of the plot, i the graphs color.
+	*
+	*@access public
+	*@var string
+	*/
 	var $Label;
+
+	/**
+	* Font of the label
+	*
+	* This is the font of the label, defaults to 2, 1-5 are built-in and works as different fontsizes.
+	*
+	*@access public
+	*@var integer
+	*/
 	var $LabelFont = 2;
+
+	/**
+	* Enable label
+	*
+	* Enable label, defaults to true, draws label if true.
+	*
+	*@access public
+	*@var boolean
+	*/
 	var $EnableLabel = true;
 
-	//The expression for graph
+	/**
+	*Expression
+	*
+	*The mathematical expression representing the graph.
+	*
+	*@see EvalMath::evaluate()
+	*@access public
+	*@var string
+	*/
 	var $Exp;
 
-	//Color of the graph
+	/**
+	* Color of the graph
+	*
+	* Color of the graph and label, array of the RGB representation of the color.
+	* Example: array($Red,$Green,$Blue);
+	*
+	*@access public
+	*@var array
+	*/
 	var $Color = array(0,0,0);
 
-	//Get hash sum of the graph
+	/**
+	*Get hash
+	*
+	*Gets a hash of the graphs parameters. Actually is not a hashsum but just all parameter parsed as one string, this is done to reduce collision risk in Plot::GetHash().
+	*
+	*@access private
+	*@return string Hash of all parameters.
+	*/
 	function GetHash()
 	{
 		return $this->Label ."_". $this->LabelFont ."_". $this->Exp ."_". $this->Color . "_" . $this->EnableLabel;
