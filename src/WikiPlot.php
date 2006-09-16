@@ -4,11 +4,10 @@
 */
 $wgExtensionFunctions[] = "wfWikiPlotExtension";
 
-function wfExampleExtension() {
+function wfWikiPlotExtension() {
     global $wgParser;
     $wgParser->setHook( "plot", "RenderWikiPlot" );
 }
-
 # The callback function for rendering plot
 function RenderWikiPlot( $input, $argv, $parser = null  ) {
 	if (!$parser) $parser =& $GLOBALS['wgParser'];
