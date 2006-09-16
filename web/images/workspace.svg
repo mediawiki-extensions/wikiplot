@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.43"
+   sodipodi:docbase="/home/jopsen/development/WikiPlot/web/images"
+   sodipodi:docname="workspace.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="267.18522"
+     inkscape:cy="569.31219"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="874"
+     inkscape:window-height="589"
+     inkscape:window-x="15"
+     inkscape:window-y="249" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:cmr10"
+       x="268.57141"
+       y="358.79077"
+       id="text1307"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan1309"
+         x="268.57141"
+         y="358.79077">An on-the-fly plotting extension...</tspan></text>
+    <rect
+       style="opacity:1;fill:#8a26d9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.25, 1.25;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3153"
+       width="276.42859"
+       height="102.14285"
+       x="31.42857"
+       y="349.50504" />
+    <text
+       xml:space="preserve"
+       style="font-size:53.79273224px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:TSCu_Comic"
+       x="71.923904"
+       y="404.75262"
+       id="text1311"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/jopsen/development/WikiPlot/web/images/WikiPlot.png"
+       inkscape:export-xdpi="179.25197"
+       inkscape:export-ydpi="179.25197"><tspan
+         sodipodi:role="line"
+         id="tspan1313"
+         x="71.923904"
+         y="404.75262"
+         style="fill:#ffffff;fill-opacity:1">WikiPlot</tspan></text>
+  </g>
+</svg>
