@@ -400,7 +400,7 @@ class Plot
 	*Example: ShortNumber(501000000) == 5.01e8
 	*
 	*@access private
-	*@param integer $Number The number you with to shorten.
+	*@param integer $Number The number you wish to shorten.
 	*@param integer $MaxLen The maximum length of the output default to 7.
 	*@return string Scientific notation of the given Number at a certain length.
 	*/
@@ -420,7 +420,15 @@ class Plot
 		}
 	}
 
-	//Returns X grid spaces from parameter or calculated 
+	/**
+	*Get X grid space
+	*
+	*Returns X grid space, either calculated or from given value if given one.
+	*
+	*@access private
+	*@uses $XGridSpace
+	*@return integer The space between grid on x axes.
+	*/
 	function GetXGridSpace()
 	{
 		if($this->XGridSpace==null)
@@ -436,7 +444,16 @@ class Plot
 		return $XGridSpace;
 	}
 	
-	//Returns Y grid spaces from parameter or calculated 
+	/**
+	*Get Y grid space
+	*
+	*Returns Y grid space, either calculated or from given value if given one. If it is to be calculated, 
+	*it is calculated the same way as x axes!
+	*
+	*@access private
+	*@uses $YGridSpace
+	*@return integer The space between grid on y axes.
+	*/
 	function GetYGridSpace()
 	{
 		if($this->YGridSpace==null)
@@ -452,7 +469,16 @@ class Plot
 		return $YGridSpace;
 	}
 
-	//Draw grid, for both X and Y
+	/**
+	*Draw grids
+	*
+	*Draws both x and y grid, using DrawXGrid() and DrawYGrid().
+	*
+	*@access private
+	*@uses DrawXGrid()
+	*@uses DrawYGrid()
+	*@param ImageResource &$ImageResource ImageResource representation of the plot.
+	*/
 	function DrawGrid(&$ImageResource)
 	{
 		$this->DrawXGrid($ImageResource);
@@ -574,15 +600,39 @@ class Plot
 	}
 
 	//Display plot as png
-	function DisplayPlot()
+	function DisplayPlot($DisplayAs = "png")
 	{
-		header("Content-type: image/png");
-		imagepng($this->DrawPlot());
+		if($DisplayAs = "png")
+		{
+			header("Content-type: image/png");
+			imagepng($this->DrawPlot());	
+		}
+		elseif($DisplayAs = "gif")
+		{
+			header("Content-type: image/gif");
+			imagegif($this->DrawPlot());
+		}
+		else
+		{
+			header("Content-type: image/jpeg");
+			imagejpeg($this->DrawPlot());
+		}
 	}
 
-	function SaveAs($Path)
+	function SaveAs($Path,$SaveAs = "png")
 	{
-		imagepng($this->DrawPlot(),$Path);
+		if($SaveAs = "png")
+		{
+			imagepng($this->DrawPlot(),$Path);	
+		}
+		elseif($SaveAs = "gif")
+		{
+			imagegif($this->DrawPlot(),$Path);
+		}
+		else
+		{
+			imagejpeg($this->DrawPlot(),$Path);
+		}
 	}
 	
 	//Scale image position to coordinat position
