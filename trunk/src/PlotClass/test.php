@@ -23,7 +23,7 @@ include("plot.class.php");
 $Plot = new Plot;
 
 $G = new Graph;
-$G->Exp = "0.002x^3";
+$G->Exp = "0.002x^3+2x+5";
 $G->Color = array(0,0,255);
 $G->Label = "test";
 
