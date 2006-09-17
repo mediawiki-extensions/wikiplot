@@ -6,10 +6,22 @@
 <description>An on-the-fly plotting extension...</description>
 <language>en-us</language>
 <copyright>Copyright 2006 Jonas F. Jensen</copyright>
-<pubDate>Sat, 16 Sep 2006 17:46:56 GMT</pubDate>
-<lastBuildDate>Sat, 16 Sep 2006 17:46:56 GMT</lastBuildDate>
+<pubDate>Sun, 17 Sep 2006 07:55:47 GMT</pubDate>
+<lastBuildDate>Sun, 17 Sep 2006 07:55:47 GMT</lastBuildDate>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 <generator>TiddlyWiki 2.0.11</generator>
+<item>
+<title>Downloads</title>
+<description>Downloads will be made available from subdirectory of their respective branch. And development snapshot will be available from SVN.&lt;br /&gt;&lt;br /&gt;!!Development snapshot&lt;br /&gt;You can checkout the current development snapshot from SVN repository, with following command:&lt;br /&gt;{{{&lt;br /&gt;svn checkout http://wikiplot.googlecode.com/svn/trunk/ wikiplot&lt;br /&gt;}}}&lt;br /&gt;(You can download SVN from [[Subversion.tigris.org|http://subversion.tigris.org/]], or using you distros package manager)</description>
+<link>http://www.tiddlywiki.com/#Downloads</link>
+<pubDate>Sun, 17 Sep 2006 07:50:51 GMT</pubDate>
+</item>
+<item>
+<title>Documentation</title>
+<description>Documentations will be made available from the /docs/ subdirectory of the releases branch. Documentation for current development snapshot is available from /docs/ subdirectory of trunk.&lt;br /&gt;&lt;br /&gt;!![[Development snapshot documentation|http://wikiplot.googlecode.com/svn/trunk/docs/index.html]]&lt;br /&gt;Documentation of our current SVN tree. This documentation is for the unstable development version available from SVN.</description>
+<link>http://www.tiddlywiki.com/#Documentation</link>
+<pubDate>Sun, 17 Sep 2006 07:16:00 GMT</pubDate>
+</item>
 <item>
 <title>Mailinglists</title>
 <description>We have 2 mailinglists, one for development, support and discussion and another for announcements only.&lt;br /&gt;&lt;br /&gt;!![[WikiPlot|http://groups.google.com/group/wikiplot]]&lt;br /&gt;Mailinglist for everything related to WikiPlot. Feel free to join and post any issues or questions you might have. This is also the place for support, bug reporting, etc...&lt;br /&gt;Join: http://groups.google.com/group/wikiplot&lt;br /&gt;&lt;br /&gt;!![[WikiPlot Announcements|http://groups.google.com/group/wikiplot-announcements]]&lt;br /&gt;Mailinglist for announcements only! This list will not feature many mails. Please subscripe to this list if you are administrator of a WikiPlot installation.&lt;br /&gt;It will feature new releases, patches and security issues. Use this list to stay up-to-date.&lt;br /&gt;Join: http://groups.google.com/group/wikiplot-announcements</description>
@@ -18,7 +30,7 @@
 </item>
 <item>
 <title>Features</title>
-<description>WikiPlot is a simple plotting extension for mathematical expressions, and offers many features, here's a short list.&lt;br /&gt;*Multiply plots on one image&lt;br /&gt;*Defines plots as an expression: 2x^2+3x+5&lt;br /&gt;**Safe evaluation&lt;br /&gt;**Built-in functions such as sin(), cos(), tan(), ln() and many more&lt;br /&gt;*Different text fonts, sizes and colors.&lt;br /&gt;*Draw numbers as scientific notation&lt;br /&gt;And many more, almost everything is configuable. See [[Documentation]] or UserGuide for more information.</description>
+<description>WikiPlot is a simple plotting extension for mathematical expressions, and offers many features, here's a short list.&lt;br /&gt;*Multiply plots on one image&lt;br /&gt;*Defines plots as an expression: 2x^2+3x+5&lt;br /&gt;**Safe evaluation&lt;br /&gt;**Built-in functions such as sin(), cos(), tan(), ln() and many more&lt;br /&gt;*Different text fonts, sizes and colors.&lt;br /&gt;*Draw numbers as scientific notation&lt;br /&gt;*Extensive [[documentation|Documentation]] using [[phpdoc|http://phpdoc.org]]&lt;br /&gt;And many more, almost everything is configuable. See [[Documentation]] or UserGuide for more information.</description>
 <link>http://www.tiddlywiki.com/#Features</link>
 <pubDate>Sat, 16 Sep 2006 08:49:00 GMT</pubDate>
 </item>
@@ -53,17 +65,17 @@
 <pubDate>Fri, 15 Sep 2006 20:00:00 GMT</pubDate>
 </item>
 <item>
+<title>StyleSheet</title>
+<description>#mainMenu a{&lt;br /&gt;display:block;&lt;br /&gt;color:#8cf;&lt;br /&gt;}&lt;br /&gt;#mainMenu a:hover{&lt;br /&gt;width: 100%;&lt;br /&gt;background: #8cf;&lt;br /&gt;color: #fff;&lt;br /&gt;}</description>
+<category>Admin</category>
+<link>http://www.tiddlywiki.com/#StyleSheet</link>
+<pubDate>Fri, 15 Sep 2006 19:58:00 GMT</pubDate>
+</item>
+<item>
 <title>GettingStarted</title>
 <description>To get started with this blank TiddlyWiki, you'll need to modify the following tiddlers:&lt;br /&gt;* SiteTitle &amp; SiteSubtitle: The title and subtitle of the site, as shown above (after saving, they will also appear in the browser title bar)&lt;br /&gt;* MainMenu: The menu (usually on the left)&lt;br /&gt;* DefaultTiddlers: Contains the names of the tiddlers that you want to appear when the TiddlyWiki is opened&lt;br /&gt;You'll also need to enter your username for signing your edits: &lt;&lt;option txtUserName&gt;&gt;</description>
 <category>Admin</category>
 <link>http://www.tiddlywiki.com/#GettingStarted</link>
-<pubDate>Fri, 15 Sep 2006 19:58:00 GMT</pubDate>
-</item>
-<item>
-<title>StyleSheet</title>
-<description></description>
-<category>Admin</category>
-<link>http://www.tiddlywiki.com/#StyleSheet</link>
 <pubDate>Fri, 15 Sep 2006 19:58:00 GMT</pubDate>
 </item>
 <item>
@@ -115,7 +127,7 @@
 </item>
 <item>
 <title>MainMenu</title>
-<description>WikiPlot&lt;br /&gt;[[Features]]&lt;br /&gt;[[Examples/Demos]]&lt;br /&gt;[[Downloads]]&lt;br /&gt;[[Documentation]]&lt;br /&gt;[[Mailinglists]]&lt;br /&gt;[[Blogs]]&lt;br /&gt;[[Developers]]&lt;br /&gt;GettingStarted</description>
+<description>WikiPlot [[Features]] [[Examples/Demos]] [[Downloads]] [[Documentation]] [[Mailinglists]] [[Blogs]] [[Developers]] GettingStarted</description>
 <category>Admin</category>
 <link>http://www.tiddlywiki.com/#MainMenu</link>
 <pubDate>Fri, 15 Sep 2006 19:31:00 GMT</pubDate>
