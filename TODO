@@ -1,6 +1,9 @@
 Known bugs:
-- Can't plot graphs like "tan(x)" correctly, this can be fixed if we use a loop between MinX and MaxX instead of a loop between 0 and ImageWidth. But this could very well have bad effects on performance.
-- Can't plot functions with autogrid where the difference between MaxX-MinX and MaxY-MinY i extrem, fix Get*GridSpace().
+- Can't plot graphs like "tan(x)" correctly, this can be fixed 
+  if we use a loop between MinX and MaxX instead of a loop between 0 and ImageWidth. 
+  But this could very well have bad effects on performance.
+- Can't plot functions with autogrid where the difference between 
+  MaxX-MinX and MaxY-MinY is extrem, fix Get*GridSpace().
 
 TODO:
 - plot.class.php Test a loop between MinX and MaxX instead of 0 and ImageWidth (See known bugs).
