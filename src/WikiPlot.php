@@ -12,6 +12,16 @@ function wfWikiPlotExtension() {
     $wgParser->setHook( "plot", "RenderWikiPlot" );
 }
 
+/**
+*Deserialize boolean
+*
+*Deserializes a boolean value from string, this function is used when you want to deserialize parameters given in the WikiML.
+*If it is impossible to deserialize the value, the output object is not initialized at all.
+*
+*@access private
+*@param string $value The string you wish to deserialize.
+*@param boolean &$SetTo The variable you want the values parsed to.
+*/
 function WikiPlotDeserializeBoolean($value,&$SetTo)
 {
 	if($value == "true")
@@ -24,6 +34,16 @@ function WikiPlotDeserializeBoolean($value,&$SetTo)
 	}
 }
 
+/**
+*Deserialize String
+*
+*Deserializes a string value from string, this function is used when you want to deserialize parameters given in the WikiML.
+*If it is impossible to deserialize the value, the output object is not initialized at all. Usualy this function does nothing.
+*
+*@access private
+*@param string $value The string you wish to deserialize.
+*@param string &$SetTo The variable you want the values parsed to.
+*/
 function WikiPlotDeserializeString($value,&$SetTo)
 {
 	if(is_string($value))
@@ -33,6 +53,17 @@ function WikiPlotDeserializeString($value,&$SetTo)
 	
 }
 
+/**
+*Deserialize Coordiante
+*
+*Deserializes a 2 integers from string, this function is used when you want to deserialize parameters given in the WikiML.
+*If it is impossible to deserialize the value, the output object is not initialized at all.
+*
+*@access private
+*@param string $value The string you wish to deserialize.
+*@param integer &$SetTo1 The variable you want the values parsed to.
+*@param integer &$SetTo2 The variable you want the values parsed to.
+*/
 function WikiPlotDeserializeMixed($value,&$SetTo1,&$SetTo2)
 {
 	$values = split(";",$value,2);
@@ -43,6 +74,16 @@ function WikiPlotDeserializeMixed($value,&$SetTo1,&$SetTo2)
 	}
 }
 
+/**
+*Deserialize Integer
+*
+*Deserializes a integer value from string, this function is used when you want to deserialize parameters given in the WikiML.
+*If it is impossible to deserialize the value, the output object is not initialized at all. Usualy this function does nothing at all, just checks to see if the value can be parsed as an integer.
+*
+*@access private
+*@param string $value The string you wish to deserialize.
+*@param Integer &$SetTo The variable you want the values parsed to.
+*/
 function WikiPlotDeserializeInteger($value,&$SetTo)
 {
 	if(is_numeric($value))
@@ -51,6 +92,17 @@ function WikiPlotDeserializeInteger($value,&$SetTo)
 	}
 }
 
+/**
+*Deserialize Color
+*
+*Deserializes an array representation of a rgb color from string, this function is used when you want to deserialize parameters given in the WikiML.
+*This function can deserialize colors written as "255,255,255" (rgb) or "#000000" (hex).
+*If it is impossible to deserialize the value, the output object is not initialized at all.
+*
+*@access private
+*@param string $value The string you wish to deserialize.
+*@param array &$SetTo The variable you want the values parsed to.
+*/
 function WikiPlotDeserializeColor($value,&$SetTo)
 {
 	$values = split("",$value,3);
