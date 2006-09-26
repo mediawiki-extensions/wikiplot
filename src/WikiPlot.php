@@ -9,7 +9,7 @@ $wgExtensionFunctions[] = "wfWikiPlotExtension";
 
 function wfWikiPlotExtension() {
     global $wgParser;
-    $wgParser->setHook( "plot", "RenderWikiPlot" );
+    $wgParser->setHook( "wikiplot", "RenderWikiPlot" );
 }
 
 /**
