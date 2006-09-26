@@ -149,6 +149,8 @@ WikiPlotDeserializeInteger($argv["captionfont"],$Plot->CaptionFont);
 WikiPlotDeserializeInteger($argv["gridfont"],$Plot->GridFont);
 
 WikiPlotDeserializeColor($argv["gridcolor"],$Plot->GridColor);
+
+//TODO: remeber to use width and height as x- and yspan if x-/yspan isn't provided.
 /*
 WikiML specification
 <plot grid="true" caption="Caption text" axis="true" xspan="-10;10" yspan="-10;10" height="20" width="20" gridspace="x;y" captionfont="5" gridfont="1" gridcolor="200,200,200">
