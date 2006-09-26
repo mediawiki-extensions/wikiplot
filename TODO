@@ -23,3 +23,19 @@ Documentation:
 			- Catching
 -		Write developers guide to plot.class.php
 - ../		Write README, INSTALL, CHANGELOG, LICENSE and add to phpdoc
+
+
+XmlParser:
+$Str = "
+<graph color="234,234,233" label="string">x^2+5</graph>
+<graph color="234,234,233" label="string">x^2+5</graph>
+<graph color="234,234,233">x^2+5</graph>
+<graph label="string">x^2+5</graph>
+";
+function ParseXml($Str)
+{
+	foreach(element)
+	{
+		$g = new Graph
+	}
+}
