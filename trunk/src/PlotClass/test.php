@@ -49,11 +49,7 @@ $Plot->MinX = -250;
 $Plot->MaxX = 250;
 $Plot->MinY = -250;
 $Plot->MaxY = 250;
-
-//$Plot->DisplayPlot();
-
-$im = $Plot->DrawPlot();
-imagepng($im);
+$Plot->DisplayPlot();
 
 
 ?>

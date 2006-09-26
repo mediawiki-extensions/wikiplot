@@ -10,6 +10,7 @@ TODO:
 - plot.class.php Create constructor
 - plot.class.php Autogeneration of colors.
 - WikiPlot.php	 Implementation of WikiML specification
+- plot.class.php Consider scaling image instead of generating new in Plot->GeneratePlot(), when given ImageResource of wrong size.
 
 Documentation:
 - plot.class.php Documentate source code.
