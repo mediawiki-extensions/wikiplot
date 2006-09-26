@@ -13,7 +13,7 @@ You should have received a copy of the GNU General Public License along with thi
 /**
 * File use to draw plots
 * 
-* This file contains classes used to draw plot's. It's dependent on evalmath.class.php.
+* This file contains a class used to draw plot's. It's dependent on graph.plot.class.php and evalmath.class.php.
 * 
 * @package WikiPlot
 * @subpackage PlotClass
@@ -28,6 +28,13 @@ You should have received a copy of the GNU General Public License along with thi
 *EvalMath is used to evaluate mathematical expressions in a safe environment.
 */
 include('evalmath.class.php');
+
+/**
+*Includes Graph representation class
+*
+*Graph is used as a representation of a graph.
+*/
+include('graph.plot.class.php');
 
 /**
 * Class used to draw plots
@@ -83,7 +90,7 @@ class Plot
 	*
 	* @var integer
 	* @access public
-	* @see DrawPlot
+	* @see DrawPlots
 	*/
 	var $Width = 100;
 
@@ -94,7 +101,7 @@ class Plot
 	*
 	* @var integer
 	* @access public
-	* @see DrawPlot
+	* @see DrawPlots
 	*/
 	var $Height = 100;
 
@@ -107,7 +114,7 @@ class Plot
 	*
 	* @var integer
 	* @access public
-	* @see DrawPlot
+	* @see DrawPlots
 	* @see MaxX
 	*/
 	var $MinX = -10;
@@ -120,7 +127,7 @@ class Plot
 	*
 	* @var integer
 	* @access public
-	* @see DrawPlot
+	* @see DrawPlots
 	* @see MinX
 	*/
 	var $MaxX = 100;
@@ -133,7 +140,7 @@ class Plot
 	*
 	* @var integer
 	* @access public
-	* @see DrawPlot
+	* @see DrawPlots
 	* @see MaxY
 	*/
 	var $MinY = -10;
@@ -146,7 +153,7 @@ class Plot
 	*
 	* @var integer
 	* @access public
-	* @see DrawPlot
+	* @see DrawPlots
 	* @see MinY
 	*/
 	var $MaxY = 100;
@@ -217,6 +224,15 @@ class Plot
 	* @see GetYGridSpace
 	*/
 	var $YGridSpace = null;
+	/**
+	* Background color
+	*
+	* Color of the background when using auto ImageResource created by GeneratePlot().
+	*
+	* @var array
+	* @access public
+	*/
+	var $BackgroundColor = array(255,255,255);
 
 	/**
 	*Generate hash
@@ -273,33 +289,44 @@ class Plot
 	*@uses $EnableAxis
 	*@uses DrawAxis()
 	*@uses DrawCaption()
-	*@uses EvalMath
-	*@uses EvalMath::evaluate()
-	*@uses GetCoordinatX()
-	*@uses GetCoordinatY()
-	*@uses GetImageX()
-	*@uses GetImageY()
-	*@uses $Graphs
-	*@uses Graph::$Color
-	*@uses Graph::$LabelFont
-	*@uses Graph::$EnableLabel
-	*@uses Graph::$Label
-	*
+	*@uses DrawPlots()
+	*@uses $BackgroundColor
+	*@param ImageResource $ImageResource Defaults to null, will generate empty ImageResource.
+	*@param Boolean $ChangeSize May we change the size of the plot to fit given ImageResource?
 	*@return ImageResource ImageResource representation of the plot.
 	*/
-	function DrawPlot()
+	function GeneratePlot($ImageResource = null, $ChangeSize = false)
 	{
-		//Get ImageResource
-		$ImageResource = imagecreatetruecolor($this->Height,$this->Width);
+		//If ImageResource is null
+		if(is_null($ImageResource))
+		{
+			//Get ImageResource
+			$ImageResource = imagecreatetruecolor($this->Height,$this->Width);
 
-		//AntiAlias ON
-		imageantialias($ImageResource,true);
+			//AntiAlias ON
+			imageantialias($ImageResource,true);
 
-		//Get a black Color
-		$Black = imagecolorexact($ImageResource,0,0,0);
+			//Fill the image with white
+			imagefill($ImageResource,0,0,imagecolorexact($ImageResource,$this->BackgroundColor[0],$this->BackgroundColor[1],$this->BackgroundColor[2]));
+		
+		}//If ImageResource doesn't fit image and we may not change size
+		elseif($ChangeSize==false&&(imagesx($ImageResource)!=$this->Width||imagesy($ImageResource)!=$this->Height))
+		{
+			//Get ImageResource
+			$ImageResource = imagecreatetruecolor($this->Height,$this->Width);
 
-		//Fill the image with white
-		imagefill($ImageResource,0,0,imagecolorexact($ImageResource,255,255,255));
+			//AntiAlias ON
+			imageantialias($ImageResource,true);
+
+			//Fill the image with white
+			imagefill($ImageResource,0,0,imagecolorexact($ImageResource,$this->BackgroundColor[0],$this->BackgroundColor[1],$this->BackgroundColor[2]));			
+		}//If we may change the size of the plot
+		elseif($ChangeSize)
+		{
+			//Changing size of the plot.
+			$this->Width = imagesx($ImageResource);
+			$this->Height = imagesy($ImageResource);
+		}
 
 		//If grid is enabled
 		if($this->EnableGrid)
@@ -315,6 +342,37 @@ class Plot
 		
 		//Draw caption
 		$this->DrawCaption($ImageResource);
+
+		//Draw plots
+		$this->DrawPlots($ImageResource);
+
+		//Return ImageResource
+		return $ImageResource;
+	}
+
+	/**
+	*Get ImageResource of the plot
+	*
+	*Generates ImageResource representation of the plot.
+	*
+	*@access private
+	*@uses $Width
+	*@uses EvalMath
+	*@uses EvalMath::evaluate()
+	*@uses GetCoordinatX()
+	*@uses GetImageX()
+	*@uses GetImageY()
+	*@uses $Graphs
+	*@uses Graph::$Color
+	*@uses Graph::$LabelFont
+	*@uses Graph::$EnableLabel
+	*@uses Graph::$Label
+	*@param ImageResource &$ImageResource ImageResource representation of the plot.
+	*/
+	function DrawPlots(&$ImageResource)
+	{
+		//Get a black Color
+		$Black = imagecolorexact($ImageResource,0,0,0);
 
 		//Y position for Labels relative to Image
 		$LabelY = 5;
@@ -365,9 +423,6 @@ class Plot
 				$LabelY += imagefontheight($S->LabelFont);
 			}
 		}
-
-		//Return ImageResource
-		return $ImageResource;
 	}
 
 	/**
@@ -658,25 +713,27 @@ class Plot
 	*Displays plot as image on the page. This makes current http-request return an image. You can set the DisplayType to png, gif or jpeg. Defaults to png, gif not recommanded. Note: this changes the current http-request mimetype to the respective image mimetype.
 	*
 	*@access public
-	*@uses DrawPlot()
+	*@uses GeneratePlot()
 	*@param string $DisplayType Type of image to view (png|jpeg|gif).
+	*@param ImageResource $ImageResource Defaults to null, will generate empty ImageResource.
+	*@param Boolean $ChangeSize May we change the size of the plot to fit given ImageResource?
 	*/
-	function DisplayPlot($DisplayType = "png")
+	function DisplayPlot($DisplayType = "png",$ImageResource = null, $ChangeSize = false)
 	{
 		if($DisplayType == "png")
 		{
 			header("Content-type: image/png");
-			imagepng($this->DrawPlot());	
+			imagepng($this->GeneratePlot($ImageResource, $ChangeSize));	
 		}
 		elseif($DisplayType == "gif")
 		{
 			header("Content-type: image/gif");
-			imagegif($this->DrawPlot());
+			imagegif($this->GeneratePlot($ImageResource, $ChangeSize));
 		}
 		else
 		{
 			header("Content-type: image/jpeg");
-			imagejpeg($this->DrawPlot());
+			imagejpeg($this->GeneratePlot($ImageResource, $ChangeSize));
 		}
 	}
 
@@ -686,23 +743,25 @@ class Plot
 	*Saves the plot to an image. You can set the SaveAs to a file type: png, gif or jpeg, defaults to png.
 	*
 	*@access public
-	*@uses DrawPlot()
+	*@uses GeneratePlot()
 	*@param string $Path Path of file to save.
 	*@param string $SaveAs Filetype definition (png|jpeg|gif).
+	*@param ImageResource $ImageResource Defaults to null, will generate empty ImageResource.
+	*@param Boolean $ChangeSize May we change the size of the plot to fit given ImageResource?
 	*/
-	function SaveAs($Path,$SaveAs = "png")
+	function SaveAs($Path,$SaveAs = "png",$ImageResource = null, $ChangeSize = false)
 	{
 		if($SaveAs == "png")
 		{
-			imagepng($this->DrawPlot(),$Path);	
+			imagepng($this->GeneratePlot($ImageResource, $ChangeSize),$Path);	
 		}
 		elseif($SaveAs == "gif")
 		{
-			imagegif($this->DrawPlot(),$Path);
+			imagegif($this->GeneratePlot($ImageResource, $ChangeSize),$Path);
 		}
 		else
 		{
-			imagejpeg($this->DrawPlot(),$Path);
+			imagejpeg($this->GeneratePlot($ImageResource, $ChangeSize),$Path);
 		}
 	}
 	
@@ -773,85 +832,5 @@ class Plot
 	{
 		return $this->Height-($y-$this->MinY)*($this->Height/($this->MaxY-$this->MinY));
 	}
-}
-
-/**
-* Representation of a graph
-* 
-* Class used to represente graphs on a plot.
-* 
-* @package WikiPlot
-* @subpackage PlotClass
-* @license http://www.gnu.org/licenses/gpl.txt GNU General Public License
-* @author WikiPlot development team.
-* @copyright Copyright 2006, WikiPlot development team.
-*/
-class Graph
-{
-	/**
-	* Label of graph
-	*
-	* This is the label or legend of the graph and will be shown in the corner of the plot, i the graphs color.
-	*
-	*@access public
-	*@var string
-	*/
-	var $Label;
-
-	/**
-	* Font of the label
-	*
-	* This is the font of the label, defaults to 2, 1-5 are built-in and works as different fontsizes.
-	*
-	*@access public
-	*@var integer
-	*/
-	var $LabelFont = 2;
-
-	/**
-	* Enable label
-	*
-	* Enable label, defaults to true, draws label if true.
-	*
-	*@access public
-	*@var boolean
-	*/
-	var $EnableLabel = true;
-
-	/**
-	*Expression
-	*
-	*The mathematical expression representing the graph.
-	*
-	*@see EvalMath::evaluate()
-	*@access public
-	*@var string
-	*/
-	var $Exp;
-
-	/**
-	* Color of the graph
-	*
-	* Color of the graph and label, array of the RGB representation of the color.
-	* Example: array($Red,$Green,$Blue);
-	*
-	*@access public
-	*@var array
-	*/
-	var $Color = array(0,0,0);
-
-	/**
-	*Get hash
-	*
-	*Gets a hash of the graphs parameters. Actually is not a hashsum but just all parameter parsed as one string, this is done to reduce collision risk in Plot::GetHash().
-	*
-	*@access private
-	*@return string Hash of all parameters.
-	*/
-	function GetHash()
-	{
-		return $this->Label ."_". $this->LabelFont ."_". $this->Exp ."_". $this->Color . "_" . $this->EnableLabel;
-	}
-
 }
 ?>
