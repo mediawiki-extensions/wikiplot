@@ -30,7 +30,7 @@
 				<li><span class="field">license:</span> <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License</a></li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_PlotClass---plot.class.php.html">/PlotClass/plot.class.php</a> (line <span class="field"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a40">40</a></span>)
+			Located in <a class="field" href="_PlotClass---plot.class.php.html">/PlotClass/plot.class.php</a> (line <span class="field"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a50">50</a></span>)
 		</p>
 		
 				
@@ -53,7 +53,11 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																																																																																																																								<div class="var-title">
+																																																																																																																																																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$BackgroundColor" title="details" class="var-name">$BackgroundColor</a>
+				</div>
+																<div class="var-title">
 					<span class="var-type">string</span>
 					<a href="#$Caption" title="details" class="var-name">$Caption</a>
 				</div>
@@ -129,51 +133,56 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																																																																																				
+																																																																																																																																												
 												<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#DisplayPlot" title="details" class="method-name">DisplayPlot</a>
-										()
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$DisplayType</span> = <span class="var-default">&quot;png&quot;</span>], [<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">$ImageResource</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$ChangeSize</span> = <span class="var-default">false</span>])
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#DrawAxis" title="details" class="method-name">DrawAxis</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+											(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#DrawCaption" title="details" class="method-name">DrawCaption</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+											(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#DrawGrid" title="details" class="method-name">DrawGrid</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+											(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 									</div>
 																<div class="method-definition">
-											<span class="method-result">ImageResource</span>
-										<a href="#DrawPlot" title="details" class="method-name">DrawPlot</a>
-										()
+											<span class="method-result">void</span>
+										<a href="#DrawPlots" title="details" class="method-name">DrawPlots</a>
+											(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#DrawXGrid" title="details" class="method-name">DrawXGrid</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+											(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#DrawYGrid" title="details" class="method-name">DrawYGrid</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+											(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">ImageResource</span>
+										<a href="#GeneratePlot" title="details" class="method-name">GeneratePlot</a>
+											([<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">$ImageResource</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$ChangeSize</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
 										<a href="#GetCoordinatX" title="details" class="method-name">GetCoordinatX</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$x</span>)
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$x</span>)
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">integer</span>
 										<a href="#GetCoordinatY" title="details" class="method-name">GetCoordinatY</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$y</span>)
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$y</span>)
 									</div>
 																<div class="method-definition">
 											<span class="method-result">string</span>
@@ -181,34 +190,34 @@
 										()
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">integer</span>
 										<a href="#GetImageX" title="details" class="method-name">GetImageX</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$x</span>)
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$x</span>)
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">integer</span>
 										<a href="#GetImageY" title="details" class="method-name">GetImageY</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$y</span>)
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$y</span>)
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">integer</span>
 										<a href="#GetXGridSpace" title="details" class="method-name">GetXGridSpace</a>
 										()
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">integer</span>
 										<a href="#GetYGridSpace" title="details" class="method-name">GetYGridSpace</a>
 										()
 									</div>
 																<div class="method-definition">
 											<span class="method-result">void</span>
 										<a href="#SaveAs" title="details" class="method-name">SaveAs</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$Path</span>)
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$Path</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$SaveAs</span> = <span class="var-default">&quot;png&quot;</span>], [<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">$ImageResource</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$ChangeSize</span> = <span class="var-default">false</span>])
 									</div>
 																<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">string</span>
 										<a href="#ShortNumber" title="details" class="method-name">ShortNumber</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$Number</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$MaxLen</span> = <span class="var-default">7</span>])
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$Number</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$MaxLen</span> = <span class="var-default">7</span>])
 									</div>
 								</div>
 		</div>
@@ -227,14 +236,38 @@
 							
 					</div>
 		<div class="info-box-body">
-			<a name="var$Caption" id="$Caption"><!-- --></A>
+			<a name="var$BackgroundColor" id="$BackgroundColor"><!-- --></A>
 <div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$BackgroundColor</span>
+			 = <span class="var-default">array(255,255,255)</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a235">235</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Background color</p>
+<p class="description"><p>Color of the background when using auto ImageResource created by GeneratePlot().</p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$Caption" id="$Caption"><!-- --></A>
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$Caption</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a63">63</a></span>)
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a73">73</a></span>)
 		</span>
 	</div>
 
@@ -242,6 +275,7 @@
 <p class="short-description">Caption of the plot</p>
 <p class="description"><p>Caption of the plot, will be shown as text centered on the final plot.  Leave this variable as null if no Caption is wanted.</p></p>
 	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawCaption">Plot::DrawCaption()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawCaption">Plot::DrawCaption()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -253,13 +287,13 @@
 
 </div>
 <a name="var$CaptionFont" id="$CaptionFont"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$CaptionFont</span>
-			 = <span class="var-default"> 5</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a74">74</a></span>)
+			 = <span class="var-default"> 5</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a84">84</a></span>)
 		</span>
 	</div>
 
@@ -267,6 +301,7 @@
 <p class="short-description">Caption font</p>
 <p class="description"><p>Font of the Caption, the fonts 1-5 is built in, and behaves as different sizes.</p></p>
 	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawCaption">Plot::DrawCaption()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawCaption">Plot::DrawCaption()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -278,13 +313,13 @@
 
 </div>
 <a name="var$EnableAxis" id="$EnableAxis"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">boolean</span>
 			<span class="var-name">$EnableAxis</span>
-			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a160">160</a></span>)
+			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a170">170</a></span>)
 		</span>
 	</div>
 
@@ -292,7 +327,7 @@
 <p class="short-description">Enable Axis</p>
 <p class="description"><p>Defaults to true and draws 2 axis.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -304,13 +339,13 @@
 
 </div>
 <a name="var$EnableGrid" id="$EnableGrid"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">boolean</span>
 			<span class="var-name">$EnableGrid</span>
-			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a170">170</a></span>)
+			 = <span class="var-default"> true</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a180">180</a></span>)
 		</span>
 	</div>
 
@@ -318,7 +353,7 @@
 <p class="short-description">Enable Grid</p>
 <p class="description"><p>Defaults to true and draws a grid.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawGrid">Plot::DrawGrid()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -330,13 +365,13 @@
 
 </div>
 <a name="var$Graphs" id="$Graphs"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$Graphs</span>
-						(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a51">51</a></span>)
+						(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a61">61</a></span>)
 		</span>
 	</div>
 
@@ -344,7 +379,7 @@
 <p class="short-description">Graphs to plot</p>
 <p class="description"><p>Array containing list of Graphs to plot.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Graph.html">Graph</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -356,13 +391,13 @@
 
 </div>
 <a name="var$GridColor" id="$GridColor"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$GridColor</span>
-			 = <span class="var-default">array(240,240,240)</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a186">186</a></span>)
+			 = <span class="var-default">array(240,240,240)</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a196">196</a></span>)
 		</span>
 	</div>
 
@@ -374,6 +409,8 @@
 <li><div class="src-line">&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><span class="src-id"><a href="../../WikiPlot/PlotClass/Plot.html#var$GridColor">GridColor</a>&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-var">$Red</span><span class="src-sym">,</span><span class="src-var">$Green</span><span class="src-sym">,</span><span class="src-var">$Blue</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 </ol></div></p></p>
 	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawGrid">Plot::DrawGrid()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -385,13 +422,13 @@
 
 </div>
 <a name="var$GridFont" id="$GridFont"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$GridFont</span>
-			 = <span class="var-default"> 1</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a196">196</a></span>)
+			 = <span class="var-default"> 1</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a206">206</a></span>)
 		</span>
 	</div>
 
@@ -399,6 +436,8 @@
 <p class="short-description">Grid font</p>
 <p class="description"><p>Font of the grids labels, the fonts 1-5 is built in, and behaves as different sizes.</p></p>
 	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawGrid">Plot::DrawGrid()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -410,13 +449,13 @@
 
 </div>
 <a name="var$Height" id="$Height"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$Height</span>
-			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a96">96</a></span>)
+			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a106">106</a></span>)
 		</span>
 	</div>
 
@@ -424,9 +463,12 @@
 <p class="short-description">Height of output image</p>
 <p class="description"><p>The width of the output image, in pixels.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatY">Plot::GetCoordinatY()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
-				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -436,13 +478,13 @@
 
 </div>
 <a name="var$MaxX" id="$MaxX"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$MaxX</span>
-			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a123">123</a></span>)
+			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a133">133</a></span>)
 		</span>
 	</div>
 
@@ -450,9 +492,14 @@
 <p class="short-description">Maximum X</p>
 <p class="description"><p>Maximum X in coordinate space.  Together with MinX this variable defines width of the plot in coordinate space.  This width may differ from width of the image, the coordinate will be scaled correctly.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatX">Plot::GetCoordinatX()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinX">Plot::$MinX</a></li>
-				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -462,13 +509,13 @@
 
 </div>
 <a name="var$MaxY" id="$MaxY"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$MaxY</span>
-			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a149">149</a></span>)
+			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a159">159</a></span>)
 		</span>
 	</div>
 
@@ -476,9 +523,14 @@
 <p class="short-description">Maximum Y</p>
 <p class="description"><p>Maximum Y in coordinate space.  Together with MinY this variable defines height of the plot in coordinate space.  This height may differ from height of the image, the coordinate will be scaled correctly.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatY">Plot::GetCoordinatY()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinY">Plot::$MinY</a></li>
-				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -488,13 +540,13 @@
 
 </div>
 <a name="var$MinX" id="$MinX"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$MinX</span>
-			 = <span class="var-default"> -10</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a110">110</a></span>)
+			 = <span class="var-default"> -10</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a120">120</a></span>)
 		</span>
 	</div>
 
@@ -502,9 +554,14 @@
 <p class="short-description">Minimum X</p>
 <p class="description"><p>Minimum X in coordinate space.  Together with MaxX this variable defines width of the plot in coordinate space.  This width may differ from width of the image, the coordinate will be scaled correctly.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatX">Plot::GetCoordinatX()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxX">Plot::$MaxX</a></li>
-				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -514,13 +571,13 @@
 
 </div>
 <a name="var$MinY" id="$MinY"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$MinY</span>
-			 = <span class="var-default"> -10</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a136">136</a></span>)
+			 = <span class="var-default"> -10</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a146">146</a></span>)
 		</span>
 	</div>
 
@@ -528,9 +585,14 @@
 <p class="short-description">Minimum Y</p>
 <p class="description"><p>Minimum Y in coordinate space.  Together with MaxY this variable defines height of the plot in coordinate space.  This height may differ from height of the image, the coordinate will be scaled correctly.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatY">Plot::GetCoordinatY()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxY">Plot::$MaxY</a></li>
-				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -540,13 +602,13 @@
 
 </div>
 <a name="var$Width" id="$Width"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$Width</span>
-			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a85">85</a></span>)
+			 = <span class="var-default"> 100</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a95">95</a></span>)
 		</span>
 	</div>
 
@@ -554,9 +616,14 @@
 <p class="short-description">Width of output image</p>
 <p class="description"><p>The width of the output image, in pixels.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatX">Plot::GetCoordinatX()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawCaption">Plot::DrawCaption()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
+				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
-				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
@@ -566,13 +633,13 @@
 
 </div>
 <a name="var$XGridSpace" id="$XGridSpace"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$XGridSpace</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a206">206</a></span>)
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a216">216</a></span>)
 		</span>
 	</div>
 
@@ -580,6 +647,7 @@
 <p class="short-description">X grid space</p>
 <p class="description"><p>Distance between grids on the x axis in coordinate space. Defaults to null, leave it null, if you want autogenerated gridspace.</p></p>
 	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetXGridSpace">Plot::GetXGridSpace()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetXGridSpace">Plot::GetXGridSpace()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -591,13 +659,13 @@
 
 </div>
 <a name="var$YGridSpace" id="$YGridSpace"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">integer</span>
 			<span class="var-name">$YGridSpace</span>
-			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a216">216</a></span>)
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a226">226</a></span>)
 		</span>
 	</div>
 
@@ -605,6 +673,7 @@
 <p class="short-description">Y grid space</p>
 <p class="description"><p>Distance between grids on the y axis in coordinate space. Defaults to null, leave it null, if you want autogenerated gridspace.</p></p>
 	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetYGridSpace">Plot::GetYGridSpace()</a></li>
 				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetHash">Plot::GetHash()</a></li>
 				<li><span class="field">see:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetYGridSpace">Plot::GetYGridSpace()</a></li>
 				<li><span class="field">access:</span> public</li>
@@ -632,35 +701,61 @@
 			<A NAME='method_detail'></A>
 
 <a name="methodDisplayPlot" id="DisplayPlot"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">DisplayPlot</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a557">557</a></span>)
+		<span class="method-title">DisplayPlot</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a721">721</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Display plot as image</p>
+<p class="description"><p>Displays plot as image on the page. This makes current http-request return an image. You can set the DisplayType to png, gif or jpeg. Defaults to png, gif not recommanded. Note: this changes the current http-request mimetype to the respective image mimetype.</p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
 	<div class="method-signature">
 		<span class="method-result">void</span>
 		<span class="method-name">
 			DisplayPlot
 		</span>
-				()
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$DisplayType</span> = <span class="var-default">&quot;png&quot;</span>], [<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">$ImageResource</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$ChangeSize</span> = <span class="var-default">false</span>])
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$DisplayType</span><span class="var-description">: Type of image to view (png|jpeg|gif).</span>			</li>
+					<li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">$ImageResource</span><span class="var-description">: Defaults to null, will generate empty ImageResource.</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$ChangeSize</span><span class="var-description">: May we change the size of the plot to fit given ImageResource?</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methodDrawAxis" id="DrawAxis"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">DrawAxis</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a537">537</a></span>)
+		<span class="method-title">DrawAxis</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a690">690</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Draw axis</p>
+<p class="description"><p>Draw both x and y axis to the plot.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinY">Plot::$MinY</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinX">Plot::$MinX</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxX">Plot::$MaxX</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxY">Plot::$MaxY</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
@@ -668,27 +763,33 @@
 		<span class="method-name">
 			DrawAxis
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+					(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">&$ImageResource</span>			</li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">&$ImageResource</span><span class="var-description">: ImageResource representation of the plot.</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodDrawCaption" id="DrawCaption"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">DrawCaption</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a371">371</a></span>)
+		<span class="method-title">DrawCaption</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a439">439</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Draw caption to ImageResource</p>
+<p class="description"><p>Draws the caption to an ImageResource representation of the plot.</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Width">Plot::$Width</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$CaptionFont">Plot::$CaptionFont</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Caption">Plot::$Caption</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
@@ -696,27 +797,32 @@
 		<span class="method-name">
 			DrawCaption
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+					(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">&$ImageResource</span>			</li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">&$ImageResource</span><span class="var-description">: ImageResource representation of the plot.</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodDrawGrid" id="DrawGrid"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">DrawGrid</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a436">436</a></span>)
+		<span class="method-title">DrawGrid</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a540">540</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Draw grids</p>
+<p class="description"><p>Draws both x and y grid, using DrawXGrid() and DrawYGrid().</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
@@ -724,106 +830,184 @@
 		<span class="method-name">
 			DrawGrid
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+					(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">&$ImageResource</span>			</li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">&$ImageResource</span><span class="var-description">: ImageResource representation of the plot.</span>			</li>
 				</ul>
 		
 			
 	</div>
-<a name="methodDrawPlot" id="DrawPlot"><!-- --></a>
-<div class="evenrow">
+<a name="methodDrawPlots" id="DrawPlots"><!-- --></a>
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">DrawPlot</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a287">287</a></span>)
+		<span class="method-title">DrawPlots</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a372">372</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Get ImageResource of the plot</p>
 <p class="description"><p>Generates ImageResource representation of the plot.</p></p>
 	<ul class="tags">
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatY">Plot::GetCoordinatY()</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatX">Plot::GetCoordinatX()</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Graph.html#var$Color">Graph::$Color</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Graph.html#var$LabelFont">Graph::$LabelFont</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Graph.html#var$Label">Graph::$Label</a></li>
 				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Graph.html#var$EnableLabel">Graph::$EnableLabel</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/EvalMath.html#methodevaluate">EvalMath::evaluate()</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/EvalMath.html">EvalMath</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Height">Plot::$Height</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Graphs">Plot::$Graphs</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$EnableAxis">Plot::$EnableAxis</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Graph.html#var$Color">Graph::$Color</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Graph.html#var$Label">Graph::$Label</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Graph.html#var$LabelFont">Graph::$LabelFont</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
 				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Width">Plot::$Width</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$EnableGrid">Plot::$EnableGrid</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawGrid">Plot::DrawGrid()</a></li>
-				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawCaption">Plot::DrawCaption()</a></li>
-				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Graphs">Plot::$Graphs</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/EvalMath.html">EvalMath</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/EvalMath.html#methodevaluate">EvalMath::evaluate()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetCoordinatX">Plot::GetCoordinatX()</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">ImageResource</span>
+		<span class="method-result">void</span>
 		<span class="method-name">
-			DrawPlot
+			DrawPlots
 		</span>
-				()
+					(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 			</div>
 	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">&$ImageResource</span><span class="var-description">: ImageResource representation of the plot.</span>			</li>
+				</ul>
 		
 			
 	</div>
 <a name="methodDrawXGrid" id="DrawXGrid"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">DrawXGrid</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a443">443</a></span>)
+		<span class="method-title">DrawXGrid</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a565">565</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Draws x-grid</p>
+<p class="description"><p>Drawing X grid on the plot.</p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetXGridSpace">Plot::GetXGridSpace()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodShortNumber">Plot::ShortNumber()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawGrid">Plot::DrawGrid()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinY">Plot::$MinY</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinX">Plot::$MinX</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$GridFont">Plot::$GridFont</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$GridColor">Plot::$GridColor</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Height">Plot::$Height</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxX">Plot::$MaxX</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxY">Plot::$MaxY</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
 	<div class="method-signature">
 		<span class="method-result">void</span>
 		<span class="method-name">
 			DrawXGrid
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+					(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">&$ImageResource</span>			</li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">&$ImageResource</span><span class="var-description">: ImageResource representation of the plot.</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodDrawYGrid" id="DrawYGrid"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">DrawYGrid</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a490">490</a></span>)
+		<span class="method-title">DrawYGrid</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a630">630</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Draws y-grid</p>
+<p class="description"><p>Drawing y grid on the plot.</p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageY">Plot::GetImageY()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetImageX">Plot::GetImageX()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGetYGridSpace">Plot::GetYGridSpace()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodShortNumber">Plot::ShortNumber()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawGrid">Plot::DrawGrid()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Width">Plot::$Width</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinY">Plot::$MinY</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$GridFont">Plot::$GridFont</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$GridColor">Plot::$GridColor</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxX">Plot::$MaxX</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxY">Plot::$MaxY</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinX">Plot::$MinX</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
 	<div class="method-signature">
 		<span class="method-result">void</span>
 		<span class="method-name">
 			DrawYGrid
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">&$ImageResource</span>)
+					(<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">&$ImageResource</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">&$ImageResource</span>			</li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">&$ImageResource</span><span class="var-description">: ImageResource representation of the plot.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodGeneratePlot" id="GeneratePlot"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">GeneratePlot</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a298">298</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get ImageResource of the plot</p>
+<p class="description"><p>Generates ImageResource representation of the plot.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ImageResource representation of the plot.</li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawGrid">Plot::DrawGrid()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$EnableGrid">Plot::$EnableGrid</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDisplayPlot">Plot::DisplayPlot()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodSaveAs">Plot::SaveAs()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawCaption">Plot::DrawCaption()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$BackgroundColor">Plot::$BackgroundColor</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$EnableAxis">Plot::$EnableAxis</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Height">Plot::$Height</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Width">Plot::$Width</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">ImageResource</span>
+		<span class="method-name">
+			GeneratePlot
+		</span>
+					([<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">$ImageResource</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$ChangeSize</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">$ImageResource</span><span class="var-description">: Defaults to null, will generate empty ImageResource.</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$ChangeSize</span><span class="var-description">: May we change the size of the plot to fit given ImageResource?</span>			</li>
 				</ul>
 		
 			
@@ -832,26 +1016,33 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">GetCoordinatX</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a569">569</a></span>)
+		<span class="method-title">GetCoordinatX</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a780">780</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert to coordinate space</p>
+<p class="description"><p>Converts an x image position to x coordinate position. Coordinate space may differ from Image space, if Width!= (MaxX-MinX).</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">return:</span> Coordiante space representation given parameter.</li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Width">Plot::$Width</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinX">Plot::$MinX</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxX">Plot::$MaxX</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">integer</span>
 		<span class="method-name">
 			GetCoordinatX
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$x</span>)
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$x</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$x</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$x</span><span class="var-description">: X image coordinat to be converted.</span>			</li>
 				</ul>
 		
 			
@@ -860,26 +1051,32 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">GetCoordinatY</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a575">575</a></span>)
+		<span class="method-title">GetCoordinatY</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a797">797</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert to coordinate space</p>
+<p class="description"><p>Converts an y image position to y coordinate position. Coordinate space may differ from Image space, if Height!= (MaxY-MinY).</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">return:</span> Coordiante space representation given parameter.</li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinY">Plot::$MinY</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxY">Plot::$MaxY</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Height">Plot::$Height</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">integer</span>
 		<span class="method-name">
 			GetCoordinatY
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$y</span>)
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$y</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$y</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$y</span><span class="var-description">: Y image coordinat to be converted.</span>			</li>
 				</ul>
 		
 			
@@ -888,13 +1085,14 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">GetHash</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a241">241</a></span>)
+		<span class="method-title">GetHash</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a260">260</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">Generate hash</p>
 <p class="description"><p>Generates a uniqe hashsum (md5) for the plot, generated from all parameters.</p></p>
 	<ul class="tags">
+				<li><span class="field">return:</span> Hash representation of the object.</li>
 				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinY">Plot::$MinY</a></li>
 				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinX">Plot::$MinX</a></li>
 				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxY">Plot::$MaxY</a></li>
@@ -928,26 +1126,36 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">GetImageX</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a581">581</a></span>)
+		<span class="method-title">GetImageX</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a814">814</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert to image space</p>
+<p class="description"><p>Converts an x in coordinate space to x image position. Coordinate space may differ from Image space, if Width!= (MaxX-MinX).</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">return:</span> Image position representation given parameter.</li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Width">Plot::$Width</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxX">Plot::$MaxX</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinX">Plot::$MinX</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">integer</span>
 		<span class="method-name">
 			GetImageX
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$x</span>)
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$x</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$x</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$x</span><span class="var-description">: X coordinat to be converted.</span>			</li>
 				</ul>
 		
 			
@@ -956,26 +1164,36 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">GetImageY</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a587">587</a></span>)
+		<span class="method-title">GetImageY</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a831">831</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Convert to image space</p>
+<p class="description"><p>Converts an y in coordinate space to y image position. Coordinate space may differ from Image space, if Height!= (MaxY-MinY).</p></p>
 	<ul class="tags">
-				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlot">Plot::DrawPlot()</a></li>
+				<li><span class="field">return:</span> Image position representation given parameter.</li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawAxis">Plot::DrawAxis()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawPlots">Plot::DrawPlots()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MinY">Plot::$MinY</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$Height">Plot::$Height</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$MaxY">Plot::$MaxY</a></li>
+				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">integer</span>
 		<span class="method-name">
 			GetImageY
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$y</span>)
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$y</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$y</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$y</span><span class="var-description">: Y coordinat to be converted.</span>			</li>
 				</ul>
 		
 			
@@ -984,13 +1202,21 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">GetXGridSpace</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a404">404</a></span>)
+		<span class="method-title">GetXGridSpace</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a490">490</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get X grid space</p>
+<p class="description"><p>Returns X grid space, either calculated or from given value if given one.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The space between grid on x axes.</li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$XGridSpace">Plot::$XGridSpace</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">integer</span>
 		<span class="method-name">
 			GetXGridSpace
 		</span>
@@ -1004,13 +1230,21 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">GetYGridSpace</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a420">420</a></span>)
+		<span class="method-title">GetYGridSpace</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a515">515</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get Y grid space</p>
+<p class="description"><p>Returns Y grid space, either calculated or from given value if given one. If it is to be calculated, it is calculated the same way as x axes!</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The space between grid on y axes.</li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#var$YGridSpace">Plot::$YGridSpace</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">integer</span>
 		<span class="method-name">
 			GetYGridSpace
 		</span>
@@ -1024,23 +1258,38 @@
 <div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">SaveAs</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a563">563</a></span>)
+		<span class="method-title">SaveAs</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a752">752</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save plot to image</p>
+<p class="description"><p>Saves the plot to an image. You can set the SaveAs to a file type: png, gif or jpeg, defaults to png.</p></p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodGeneratePlot">Plot::GeneratePlot()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
 	<div class="method-signature">
 		<span class="method-result">void</span>
 		<span class="method-name">
 			SaveAs
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$Path</span>)
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$Path</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$SaveAs</span> = <span class="var-default">&quot;png&quot;</span>], [<span class="var-type">ImageResource</span>&nbsp;<span class="var-name">$ImageResource</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$ChangeSize</span> = <span class="var-default">false</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$Path</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$Path</span><span class="var-description">: Path of file to save.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$SaveAs</span><span class="var-description">: Filetype definition (png|jpeg|gif).</span>			</li>
+					<li>
+				<span class="var-type">ImageResource</span>
+				<span class="var-name">$ImageResource</span><span class="var-description">: Defaults to null, will generate empty ImageResource.</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$ChangeSize</span><span class="var-description">: May we change the size of the plot to fit given ImageResource?</span>			</li>
 				</ul>
 		
 			
@@ -1049,26 +1298,34 @@
 <div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">ShortNumber</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a387">387</a></span>)
+		<span class="method-title">ShortNumber</span> (line <span class="line-number"><a href="../../__filesource/fsource_WikiPlot_PlotClass_PlotClassplot.class.php.html#a465">465</a></span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates short numbers</p>
+<p class="description"><p>Rewrites numbers into scientific notation, with a certain maximum length.<br /> Example: ShortNumber(501000000) == 5.01e8</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Scientific notation of the given Number at a certain length.</li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawYGrid">Plot::DrawYGrid()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../WikiPlot/PlotClass/Plot.html#methodDrawXGrid">Plot::DrawXGrid()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">string</span>
 		<span class="method-name">
 			ShortNumber
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$Number</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$MaxLen</span> = <span class="var-default">7</span>])
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$Number</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$MaxLen</span> = <span class="var-default">7</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$Number</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$Number</span><span class="var-description">: The number you wish to shorten.</span>			</li>
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$MaxLen</span>			</li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$MaxLen</span><span class="var-description">: The maximum length of the output default to 7.</span>			</li>
 				</ul>
 		
 			
@@ -1079,7 +1336,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Sun, 10 Sep 2006 17:01:41 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0</a>
+		Documentation generated on Tue, 26 Sep 2006 16:52:22 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0</a>
 	</p>
 	</div></body>
 </html>
