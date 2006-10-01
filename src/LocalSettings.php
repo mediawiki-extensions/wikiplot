@@ -29,7 +29,6 @@ define("WikiPlotCachePath","./cache/");
 *@var string absolute url
 */
 define("WikiPlotCacheURL","http://example.com/cache/");
-//Current setting would not work with default mod_rewrite settings for MediaWiki.
 
 /**
 * Max Cache Age
