@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title></title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+	<table class="tutorial-nav-box">
+	<tr>
+		<td style="width: 30%">
+							<span class="nav-button-disabled">Previous</span>
+					</td>
+		<td style="text-align: center">
+					</td>
+		<td style="text-align: right; width: 30%">
+							<a href="../WikiPlot/tutorial_gpl.pkg.html" class="nav-button">Next</a>
+					</td>
+	</tr>
+	<tr>
+		<td style="width: 30%">
+					</td>
+		<td style="text-align: center">
+					</td>
+		<td style="text-align: right; width: 30%">
+							<span class="detail">GNU General Public License</span>
+					</td>
+	</tr>
+</table>
+	
+User Guide$LastChangedDate$
+		<div class="notes">2006
+			The WikiPlot Development Team.</div>
+		<div class="release-info">(Version 1.0.0)</div>
+		$LastChangedRevision$
+		<div class="authors"><h2 class="title">Authors</h2><span class="author">Jonas
+				F.
+				Jensen</span></div>
+		<p>WikiPlot is a plotting extension for MediaWiki, this is the guide lines for the users of the extension, not administrators.</p>
+	WikiPlot syntax<p>This is s simple guide to learn and become familiar with WikiPlot syntax, if the WikiPlot extension is installed on the wiki you wish to modify, you can add simply just type the WikiPlot syntax in you file. This chapter will not document all the features of WikiPlot but just the basics.</p>
+		<p>First things first, let's start with a short introduction our terminology. We have one plot and one or more graphs (Note the words I just used). Where plot defines the coordinate space, width, height and axes of the final image. A plot contains one or more graph, which is expressed with a mathematical expression (for instance: x^2+4x+5). If you thing this is wired, hold on there, I will clarify in just a moment.</p>
+		<p>Now let's get dirty, following code will generate an image with 1 graph, from the expression y(x)=x+4.</p>
+		<div class="src-code"><pre>
+&lt;wikiplot&gt;
+	&lt;graph&gt;x+4&lt;/graph&gt;
+&lt;/wikiplot&gt;
+</pre></div>
+		<p>Okay that is possibly the shortest we can make it. I wouldn't be supprised if you would consider that a little too basic. So just to match some basic functionallity, we are going to add an other graph with the expression y(x)=3*x-3, and some optional parameters to modifly the output image.</p>
+		<div class="src-code"><pre>
+&lt;wikiplot height=&quot;200&quot; width=&quot;200&quot; caption=&quot;Simple plot&quot; xspan=&quot;-100;100&quot; yspan=&quot;-100;100&quot;&gt;
+	&lt;graph label=&quot;Graph 1.&quot; color=&quot;255,0,0&quot;&gt;x+4&lt;/graph&gt;
+	&lt;graph label=&quot;Graph 2.&quot;&gt;3*x-3&lt;/graph&gt;
+&lt;/wikiplot&gt;
+</pre></div>
+		<p>Now this is different. This will result in an image with width and heigth of 200 pixels. It will have a caption saying <em>Simple plot</em>. The image will be a clip of a coordinate space, where minimum X will be -100 and maximum X will be 100, same goes for Y. The image contain 2 lables in the corner, one saying <em>Graph 1</em> another saying <em>Graph 2</em>, one of them will have the color rgb(255,0,0) which is red. Apart from that there will also be 2 graphs.</p>
+		<p>To simplify the example have been splittede and explained here:</p>
+		height
+				<li><p>Height of the output image in pixels.</p></li>
+			width
+				<li><p>Width of the output image in pixels.</p></li>
+			caption
+				<li><p>Caption on the output image.</p></li>
+			xspan
+			yspan
+				<li><p>Values representing minimun x and maximun x, in coordinate space. It you set xspan=&quot;-50;75&quot; the lowest x values on you image will be -50 and the heighest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completly similar except for the fact that they change the y or x coordiante space respectively.</p></li>
+			x+4
+			3*x-3
+				<li><p>These are mathematical expressions defining the 2 graphs on the image.</p></li>
+			label
+				<li><p>Labels that are placed in the corner of the image, displayed in the same color as the graphs they represent.</p></li>
+			color
+				<li><p>Color of the graph, in an RGB (Red,Green,Blue) representation.</p></li>
+		<p>If you do not understand this, please feel free to contact us, or post you question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confues users, so please help us improve.</p>
+
+	<table class="tutorial-nav-box">
+	<tr>
+		<td style="width: 30%">
+							<span class="nav-button-disabled">Previous</span>
+					</td>
+		<td style="text-align: center">
+					</td>
+		<td style="text-align: right; width: 30%">
+							<a href="../WikiPlot/tutorial_gpl.pkg.html" class="nav-button">Next</a>
+					</td>
+	</tr>
+	<tr>
+		<td style="width: 30%">
+					</td>
+		<td style="text-align: center">
+					</td>
+		<td style="text-align: right; width: 30%">
+							<span class="detail">GNU General Public License</span>
+					</td>
+	</tr>
+</table>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 26 Sep 2006 21:26:37 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0</a>
+	</p>
+	</div></body>
+</html>
