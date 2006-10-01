@@ -1,62 +1,113 @@
 <?php
-/**
-* @package WikiPlot
-*/
-class XMLparser {
 
-   var $attr;
-   var $data;
-   var $graph;
-   var $input;
-   
-   function openElement($parser, $element, $attributes) {
-       $data['name'] = $element;
-       if ($attributes) { $data['attr'] = $attributes; }
-       $this->data[] = $data;
-   }
+class XMLParser {
+	 
+   var $Parser;
+   var $Input;
+   var $Tag;
+   var $Attributes;
+   var $Expression;
+   var $Tags;
+   var $Separator;
 
-   function closeElement($parser, $element) {
-     if (count($this->data) > 1) {
-           $data = array_pop($this->data);
-           $index = count($this->data) - 1;
-           $this->data[$index][$element][] = $data;
-       }
-   }
-
-   function characterData($parser, $data) 
+   function XMLParser($Data)
    {
-       if ($data = trim($data)) {
-           $index = count($this->data) - 1;
-           $this->data[$index]['math'] .= $data;
-       }
-   }
-   
+   	   $this->Parser = xml_parser_create();
+       
+   	   $this->Input = $Data;
+   	   
+   	   $this->Tags = array();
+   	   
+   	   $this->Separator = "<graph";
 
-   function XMLParser($xml_file)
+       xml_set_object($this->Parser, $this);
+       
+       xml_set_element_handler($this->Parser, "OpenTag", "CloseTag");
+       
+       xml_set_character_data_handler($this->Parser, "GetCharData");
+            
+       $this->ExplodeInputData();
+       
+       $this->Parse($this->Input);
+ 	   
+       xml_parser_free($this->Parser);
+   }
+
+   function Parse($Data)
    {
-       $this->input = '<root>';
-	   $this->input .= $xml_file;
-	   $this->input .= '<root>';
-       $this->xml = xml_parser_create();
-       xml_set_object($this->xml, $this);
-       xml_set_element_handler($this->xml, 'openElement', 'closeElement');
-       xml_set_character_data_handler($this->xml, 'characterData');
-       $this->parse($xml_file);
+       xml_parse($this->Parser, $Data);
+       
+       $this->CreatTagArray();
    }
    
-   function parse($xml_file) 
+   function CreatTagArray()
    {
-   	   xml_parser_set_option($this->xml, XML_OPTION_CASE_FOLDING, false);
-       xml_parse($this->xml, $xml_file);
+   	   if (!empty($this->Attributes) && !empty($this->Expression))
+   	   {
+   	      $this->Tag = array($this->Attributes, $this->Expression);	
+   	   }
+   	   else 
+   	   {
+   	   	  $this->Tag = array($this->Expression);
+   	   }
    }
-   
-   function prep_graph() {
-		$temp = array();
-		$temp_i = count($this->data[0]['graph']);
-		
-		for ($i=0; $i<$temp_i; $i++) {
-			$this->graph[] = $this->data[0]['graph'][$i];
-		}
+
+   function ExplodeInputData()
+   {
+   	   $InputTags = explode($this->Separator , $this->Input); 
+   	   
+   	   for ($i=1; $i < count($InputTags); $i++)
+   	   {
+   	   	   array_push($this->Tags, $this->Separator ."". $InputTags[$i]);
+   	   }
    }
+      
+   function OpenTag($Parser, $Tag, $Attributes)
+   {
+   	   if (isset($Attributes) && is_array($Attributes))
+   	   		$this->Attributes = $Attributes;
+   	   else 
+   	   		$this->Attributes = array();	   	   
+   }
+
+   function GetCharData($Parser, $CharData)
+   {
+   	   $this->Expression = $CharData;
+   }
+
+   function CloseTag($Parser, $Tag)
+   {
+       //Have nothing do to! :(
+   }
+
+   function CreatInputArray()
+   {
+	  $Graph = array();
+	     	  
+   	  foreach( $this->Tags as $Tag )
+   	  {
+   	  	$XMLParser = new XMLParser($Tag);
+   		array_push($Graph, $XMLParser->Tag);
+   	  }
+	  
+   	  return $Graph;
+   }   
 }
+
+
+$st1 = "<graph color='234,234,233' label='string'>x^2+5</graph>
+       <graph color='234,234,233' label='string'>x^2+5</graph>
+       <graph>x^2+5</graph>";
+
+$st2 = "<root>
+       <graph color='234,234,233' label='string'>x^2+5</graph>
+       <tag1 name='serie1'>This is serie one</tag1>
+       <graph color='234,234,233' label='string'>x^2+5</graph>
+       <tag2 name='serie without attr'>this is serie three</tag2>
+       <graph>x^2+5</graph>
+       </root>";
+
+$xml = new XMLParser($st2);
+print_r($xml->CreatInputArray());
+
 ?>

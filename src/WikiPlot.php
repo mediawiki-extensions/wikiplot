@@ -162,7 +162,7 @@ WikiML specification
 	//Render as wikitext:
 	$localParser = new Parser();
 	$output = $localParser->parse(";Test:This is rendered wikitext", $parser->mTitle, $parser->mOptions); //Once we test this, remember to check if adding parameters true, false OR false, true OR false OR true... see http://meta.wikimedia.org/wiki/MediaWiki_extensions_FAQ for more information on wikitext rendering in extensions
-	$text = $output->getText()
+	$text = $output->getText();
 
 	return $output;
 }
