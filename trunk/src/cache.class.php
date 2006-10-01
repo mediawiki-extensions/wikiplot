@@ -99,7 +99,7 @@ class Cache
 		$CachePath = _SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath;
 		if ($cache = opendir($CachePath))
 		{
-			$MaxFileAge = time() - (WikiPlotCacheAge * 24 * 60 * 60);
+			$MaxFileAge = time() - (WikiPlotMaxUnusedAge * 24 * 60 * 60);
 			while (false !== ($file = readdir($cache)))
 			{
 				$FileAge = fileatime($CachePath . "/" . $file);
