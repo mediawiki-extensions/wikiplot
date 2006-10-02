@@ -64,7 +64,7 @@ class Cache
 	*/
 	function CleanupMaxAge()
 	{
-		$CachePath = _SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath;
+		$CachePath = $_SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath;
 		if ($cache = opendir($CachePath))
 		{
 			$MaxFileAge = time() - (WikiPlotCacheAge * 24 * 60 * 60);
@@ -96,7 +96,7 @@ class Cache
 	*/
 	function CleanupUnused()
 	{
-		$CachePath = _SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath;
+		$CachePath = $_SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath;
 		if ($cache = opendir($CachePath))
 		{
 			$MaxFileAge = time() - (WikiPlotMaxUnusedAge * 24 * 60 * 60);
@@ -128,13 +128,13 @@ class Cache
 	*/
 	function FileExist($FileName)
 	{
-		return file_exists(_SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath . $FileName);
+		return file_exists($_SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath . $FileName);
 	}
 
 	/**
 	* Get file URL
 	*
-	* Gets the URL og the given FileName, returns null if the files doen't exist.
+	* Gets the URL og the given FileName, returns false if the files doen't exist.
 	* 
 	* @access public
 	* @uses FileExist()
@@ -146,6 +146,8 @@ class Cache
 		if($this->FileExist($FileName))
 		{
 			return WikiPlotCacheURL . "/" . $FileName;
+		}else{
+			return false;
 		}
 	}
 
@@ -167,10 +169,10 @@ class Cache
 			{
 				return false;
 			}else{
-				return _SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath . $FileName;
+				return $_SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath . $FileName;
 			}
 		}else{
-			return _SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath;
+			return $_SERVER["DOCUMENT_ROOT"] . WikiPlotCachePath;
 		}
 	}
 }
