@@ -6,15 +6,15 @@
 <description>An on-the-fly plotting extension...</description>
 <language>en-us</language>
 <copyright>Copyright 2006 Jonas F. Jensen</copyright>
-<pubDate>Sun, 17 Sep 2006 07:55:47 GMT</pubDate>
-<lastBuildDate>Sun, 17 Sep 2006 07:55:47 GMT</lastBuildDate>
+<pubDate>Tue, 26 Sep 2006 06:37:34 GMT</pubDate>
+<lastBuildDate>Tue, 26 Sep 2006 06:37:34 GMT</lastBuildDate>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 <generator>TiddlyWiki 2.0.11</generator>
 <item>
 <title>Downloads</title>
 <description>Downloads will be made available from subdirectory of their respective branch. And development snapshot will be available from SVN.&lt;br /&gt;&lt;br /&gt;!!Development snapshot&lt;br /&gt;You can checkout the current development snapshot from SVN repository, with following command:&lt;br /&gt;{{{&lt;br /&gt;svn checkout http://wikiplot.googlecode.com/svn/trunk/ wikiplot&lt;br /&gt;}}}&lt;br /&gt;(You can download SVN from [[Subversion.tigris.org|http://subversion.tigris.org/]], or using you distros package manager)</description>
 <link>http://www.tiddlywiki.com/#Downloads</link>
-<pubDate>Sun, 17 Sep 2006 07:50:51 GMT</pubDate>
+<pubDate>Sun, 17 Sep 2006 07:50:00 GMT</pubDate>
 </item>
 <item>
 <title>Documentation</title>
@@ -48,7 +48,7 @@
 </item>
 <item>
 <title>PageTemplate</title>
-<description>&lt;div class='header' macro='gradient vert #18f #04b'&gt;&lt;br /&gt;&lt;div class='headerShadow'&gt;&lt;br /&gt;&lt;img src='images/WikiPlot.png' border='0'&gt;&lt;br /&gt;&lt;span class='siteSubtitle' refresh='content' tiddler='SiteSubtitle'&gt;&lt;/span&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='mainMenu' refresh='content' tiddler='MainMenu'&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='sidebar'&gt;&lt;br /&gt;&lt;div id='sidebarOptions' refresh='content' tiddler='SideBarOptions'&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='sidebarTabs' refresh='content' force='true' tiddler='SideBarTabs'&gt;&lt;/div&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='displayArea'&gt;&lt;br /&gt;&lt;div id='messageArea'&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;&lt;br /&gt;&lt;/div&gt;</description>
+<description>&lt;div class='header' macro='gradient vert #18f #04b'&gt;&lt;br /&gt;&lt;div class='headerShadow'&gt;&lt;br /&gt;&lt;img src='images/WikiPlot.png' border='0'&gt;&lt;br /&gt;&lt;span class='siteSubtitle' refresh='content' tiddler='SiteSubtitle'&gt;&lt;/span&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='mainMenu' refresh='content' tiddler='MainMenu'&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='sidebar'&gt;&lt;br /&gt;&lt;div id='sidebarOptions' refresh='content' tiddler='SideBarOptions'&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='sidebarTabs' refresh='content' force='true' tiddler='SideBarTabs'&gt;&lt;/div&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='displayArea'&gt;&lt;br /&gt;&lt;div id='messageArea'&gt;&lt;/div&gt;&lt;br /&gt;&lt;div id='tiddlerDisplay'&gt;&lt;/div&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;script src=&quot;http://www.google-analytics.com/urchin.js&quot; type=&quot;text/javascript&quot;&gt;&lt;br /&gt;&lt;/script&gt;&lt;br /&gt;&lt;script type=&quot;text/javascript&quot;&gt;&lt;br /&gt;_uacct = &quot;UA-479982-5&quot;;&lt;br /&gt;urchinTracker();&lt;br /&gt;&lt;/script&gt;</description>
 <link>http://www.tiddlywiki.com/#PageTemplate</link>
 <pubDate>Sat, 16 Sep 2006 06:23:00 GMT</pubDate>
 </item>
@@ -80,7 +80,7 @@
 </item>
 <item>
 <title>Developers</title>
-<description>Write something about the developers... and link to their pages:&lt;br /&gt;[[Jonas F. Jensen]]&lt;br /&gt;</description>
+<description>Currently we are three developers on the team:&lt;br /&gt;&lt;br /&gt;*[[Jonas F. Jensen]]&lt;br /&gt;*[[Thomas F. Nielsen]]&lt;br /&gt;*[[Ismail Faizi]]&lt;br /&gt;</description>
 <category>Developers</category>
 <link>http://www.tiddlywiki.com/#Developers</link>
 <pubDate>Fri, 15 Sep 2006 19:43:00 GMT</pubDate>
