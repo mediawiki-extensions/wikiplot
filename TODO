@@ -12,6 +12,9 @@ TODO:
 - WikiPlot.php	 Implementation of WikiML specification
 - plot.class.php Consider scaling image instead of generating new in Plot->GeneratePlot(), 
   when given ImageResource of wrong size.
+- xml.class.php  Set attribute key-names to lower case.
+- WikiPlot.php   Chech whether $argv are lower or uppercase perhaps mixed, and what to do about it!
+- Fix all includes/require paths, and write INSTALL file, descripting installation process and paths.
 
 Documentation:
 - plot.class.php Documentate source code.

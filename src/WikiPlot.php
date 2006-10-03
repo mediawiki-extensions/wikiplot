@@ -5,6 +5,9 @@
 
 require_once("./PlotClass/plot.class.php");
 
+require_once("./xml.class.php");
+require_once("./cache.class.php");
+
 $wgExtensionFunctions[] = "wfWikiPlotExtension";
 
 function wfWikiPlotExtension() {
@@ -127,11 +130,6 @@ function RenderWikiPlot( $input, $argv, $parser = null  ) {
 	# Put this on the sandbox page:  (works in MediaWiki 1.5.5)
 	#   <example argument="foo" argument2="bar">Testing text **example** in between the new tags</example>
 
-	//Getting arguments from wikitext
-	$output = "Text passed into example extension: <br/>$input";
-	$output .= " <br/> and the value for the arg 'argument' is " . $argv["argument"];
-	$output .= " <br/> and the value for the arg 'argument2' is: " . $argv["argument2"];
-
 $Plot = new Plot();
 
 WikiPlotDeserializeBoolean($argv["grid"],$Plot->EnableGrid);
@@ -153,17 +151,55 @@ WikiPlotDeserializeColor($argv["gridcolor"],$Plot->GridColor);
 //TODO: remeber to use width and height as x- and yspan if x-/yspan isn't provided.
 /*
 WikiML specification
-<plot grid="true" caption="Caption text" axis="true" xspan="-10;10" yspan="-10;10" height="20" width="20" gridspace="x;y" captionfont="5" gridfont="1" gridcolor="200,200,200">
+<wikiplot grid="true" caption="Caption text" axis="true" xspan="-10;10" yspan="-10;10" height="20" width="20" gridspace="x;y" captionfont="5" gridfont="1" gridcolor="200,200,200">
 <graph label="Graph 1" color="0,0,255" font="3">5x^3</graph>
-<graph label="Graph 2" color="0,255,0" font="3">2x^2</graph>
-</plot>
+<graph label="Graph 2" color="#449933" font="3">2x^2</graph>
+</wikiplot>
 */
 
+//Parsing Xml
+$XmlParser = new XMLParser($input);
+$Graphs = $XmlParser->CreateInputArray();
+
+foreach($Graphs as $Graph)
+{
+	$G = new Graph;
+	if(!is_array($Graph[1]))
+	{
+		$G->Exp = $Graph[1];
+		WikiPlotDeserializeString($Graph[0]["label"],$G->Label);
+		WikiPlotDeserializeColor($Graph[0]["color"],$G->Color);
+	}else{
+		$G->Exp = $Graph[0];
+	}
+	array_push($Plot->Graphs,$G)
+}
+
+//Render the plot
+
+	//Get instance of cache
+	$cache = new cache();
+	
+	//Url of the current plot
+	$PlotURL = "";
+
+	$PlotFileName = $Plot->GetHash() . ".png";
+	if(!$cache->FileExist($PlotFileName))
+	{
+		$Plot->SaveAs($cache->CachePath($PlotFileName));
+	}else{
+		$PlotURL = $cache->FileURL($PlotFileName);
+	}
+
+	$output = "<a href='$PlotURL' class='image' title='See the plot'><img src='$PlotURL'></a>";
+
+/*
 	//Render as wikitext:
+	//To use external images this must be enabled: $wgAllowExternalImages = true; remeber to inform user.
 	$localParser = new Parser();
 	$output = $localParser->parse(";Test:This is rendered wikitext", $parser->mTitle, $parser->mOptions); //Once we test this, remember to check if adding parameters true, false OR false, true OR false OR true... see http://meta.wikimedia.org/wiki/MediaWiki_extensions_FAQ for more information on wikitext rendering in extensions
 	$text = $output->getText();
-
+*/
 	return $output;
 }
 
