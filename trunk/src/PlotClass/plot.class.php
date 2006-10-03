@@ -58,7 +58,7 @@ class Plot
 	* @access public
 	* @see Graph
 	*/
-	var $Graphs;
+	var $Graphs = array();
 
 	/**
 	* Caption of the plot
