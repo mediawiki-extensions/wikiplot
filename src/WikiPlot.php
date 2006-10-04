@@ -3,10 +3,40 @@
 * @package WikiPlot
 */
 
-require_once("./PlotClass/plot.class.php");
 
-require_once("./xml.class.php");
-require_once("./cache.class.php");
+if(!defined("WikiPlotPath"))
+{
+	/**
+	*Path to WikiPlot installation
+	*
+	*Defines the path to the WikiPlot installation, relative to execution directory of the wiki installation. Usually "./extension/WikiPlot", but it may be over written in the localsettings file of the wiki.
+	*/
+	define("WikiPlotPath","./extensions/WikiPlot/");
+}
+
+
+/**
+*Include plot.class.php
+*
+*Requires PlotClass to render plots.
+*/
+require_once(WikiPlotPath . "./PlotClass/plot.class.php");
+
+/**
+*Include xml.class.php
+*
+*Requires XMLParser to parse xml to plot.
+*/
+require_once(WikiPlotPath . "./xml.class.php");
+
+/**
+*Include cache.class.php
+*
+*Requires Cache to control the cache.
+*/
+require_once(WikiPlotPath . "./cache.class.php");
+
+
 
 $wgExtensionFunctions[] = "wfWikiPlotExtension";
 
