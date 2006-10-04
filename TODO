@@ -14,7 +14,8 @@ TODO:
   when given ImageResource of wrong size.
 - xml.class.php  Set attribute key-names to lower case.
 - WikiPlot.php   Chech whether $argv are lower or uppercase perhaps mixed, and what to do about it!
-- Fix all includes/require paths, and write INSTALL file, descripting installation process and paths.
+- Find out why constants defined in LocalSettings.php doesn't work! (Show stopper)
+- WikiPlot.php   Use is_null() in all deserialization function, to prevent warning/errors when using split() on empty variable=null.
 
 Documentation:
 - plot.class.php Documentate source code.
