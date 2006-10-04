@@ -26,7 +26,7 @@ You should have received a copy of the GNU General Public License along with thi
 *
 * This file is needed to control the cache correctly.
 */
-require_once(WikiPlotPath . "LocalSettings.php");
+require_once("LocalSettings.php");
 
 /**
 * Cache controlling class

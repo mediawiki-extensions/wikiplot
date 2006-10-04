@@ -27,14 +27,14 @@ You should have received a copy of the GNU General Public License along with thi
 *
 *EvalMath is used to evaluate mathematical expressions in a safe environment.
 */
-require_once(WikiPlotPath .'evalmath.class.php');
+require_once('evalmath.class.php');
 
 /**
 *Includes Graph representation class
 *
 *Graph is used as a representation of a graph.
 */
-require_once(WikiPlotPath .'graph.plot.class.php');
+require_once('graph.plot.class.php');
 
 /**
 * Class used to draw plots
