@@ -86,11 +86,14 @@ function WikiPlotDeserializeString($value,&$SetTo)
 */
 function WikiPlotDeserializeMixed($value,&$SetTo1,&$SetTo2)
 {
-	$values = split(";",$value,2);
-	if(is_numeric($values[0])&&is_numeric($values[1]))
+	if(!is_null($value))
 	{
-		$SetTo1 = $values[0];
-		$SetTo2 = $values[1];
+		$values = explode(";",$value,2);
+		if(is_numeric($values[0])&&is_numeric($values[1]))
+		{
+			$SetTo1 = $values[0];
+			$SetTo2 = $values[1];
+		}
 	}
 }
 
@@ -106,9 +109,12 @@ function WikiPlotDeserializeMixed($value,&$SetTo1,&$SetTo2)
 */
 function WikiPlotDeserializeInteger($value,&$SetTo)
 {
-	if(is_numeric($value))
+	if(!is_null($value))
 	{
-		$SetTo = $value;
+		if(is_numeric($value))
+		{
+			$SetTo = $value;
+		}
 	}
 }
 
@@ -125,17 +131,20 @@ function WikiPlotDeserializeInteger($value,&$SetTo)
 */
 function WikiPlotDeserializeColor($value,&$SetTo)
 {
-	$values = split("",$value,3);
-	if(is_numeric($values[0])&&is_numeric($values[1])&&is_numeric($values[2]))
+	if(!is_null($value))
 	{
-		$SetTo = array($values[0],$values[1],$values[2]);
-	}
-	elseif(strstr($value,"#"))
-	{
-		$red = hexdec(substr($val, 1 , 2));
-		$green = hexdec(substr($val, 3 , 2));
-		$blue = hexdec(substr($val, 5 , 2));
-		$SetTo = array($red,$green,$blue);
+		$values = explode(",",$value,3);
+		if(is_numeric($values[0])&&is_numeric($values[1])&&is_numeric($values[2]))
+		{
+			$SetTo = array($values[0],$values[1],$values[2]);
+		}
+		elseif(strstr($value,"#"))
+		{
+			$red = hexdec(substr($val, 1 , 2));
+			$green = hexdec(substr($val, 3 , 2));
+			$blue = hexdec(substr($val, 5 , 2));
+			$SetTo = array($red,$green,$blue);
+		}
 	}
 }
 
