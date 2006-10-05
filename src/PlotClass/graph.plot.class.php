@@ -97,7 +97,7 @@ class Graph
 	*/
 	function GetHash()
 	{
-		return $this->Label ."_". $this->LabelFont ."_". $this->Exp ."_". $this->Color . "_" . $this->EnableLabel;
+		return $this->Label ."_". $this->LabelFont ."_". $this->Exp ."_". $this->Color[0] . "_" . $this->Color[1] . "_" . $this->Color[2] . "_" . $this->EnableLabel;
 	}
 
 }
