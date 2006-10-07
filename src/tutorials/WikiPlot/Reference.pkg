@@ -124,7 +124,9 @@
 		<para>Following is an advanced example of how WikiPlot could be used. Normally you don't need to used all parameters, most basic ones are covered in depth in the WikiPlot Userguide. This is a pretty extrem example of how to use all parameters:</para>
 		<programlisting>
 <![CDATA[
-<wikiplot height="400" width="800" caption="Complete Example" xspan="-100;100" yspan="-200;200" gridspace="10;20" captionfont="4" gridfont="2" axis="true" grid="true">
+<wikiplot height="400" width="800" caption="Complete Example"
+	 xspan="-100;100" yspan="-200;200" gridspace="10;20" 
+	captionfont="4" gridfont="2" axis="true" grid="true">
 	<graph label="A red graph" color="255,0,0">x^2+4</graph>
 	<graph label="A blue graph" color="0,0,255">3*x-3</graph>
 </wikiplot>
