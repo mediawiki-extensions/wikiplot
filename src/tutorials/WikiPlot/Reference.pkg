@@ -1,0 +1,135 @@
+<refentry id="{@id}">
+	<refnamediv>
+		<refname>WikiPlot Syntax Reference</refname>
+		<refpurpose>Complete WikiPlot syntax reference</refpurpose>
+	</refnamediv>
+	<refsynopsisdiv>
+		<para>The WikiPlot Development Team.</para>
+		<authorgroup>
+			<author>
+			Jonas F. Jensen.
+				<authorblurb>
+					{@link mailto:wikiplot@jopsen.dk WikiPlot@Jopsen.dk}
+				</authorblurb>
+			</author>
+		</authorgroup>
+	</refsynopsisdiv>
+	<refsect1 id="{@id Reference}">
+		<title>WikiPlot Syntax Reference</title>
+		<para>This is a complete syntax reference for WikiPlot, if you are note familiar with xml or the most common WikiPlot syntax, it is recommened that you read the WikiPlot UserGuide first. Below you will find a documentation of the parameters and content for the wikiplot and graph tag,  respektively. At the end of the article you will find a complete example of a plot with use of all parameters.</para>
+		<refsect2>
+			<title>wikiplot parameters and content</title>
+			<para>The wikiplot tag contains one or more graph tags, the graph tags defines the different mathematical expressions to be plotted. The wikiplot tag defines the image/environment/coordinate-system these mathematical expressions are to be plotted upon. The wikiplot tag takes following parameters:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><emphasis>caption</emphasis></para>
+					<blockquote><para>Defines the caption of the plot, is shown i the top centered on the final image. Leave empty or do not define this parameter, you do not want any caption on your image.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>captionfont</emphasis></para>
+					<blockquote><para>An integer representing font type of the caption, fonts 1-5 are builtin and represents different font sizes 1 being smallest and 5 biggest, defaults to 5.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>height</emphasis></para>
+					<blockquote><para>An integer, defining the the height of the final image in pixels.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>width</emphasis></para>
+					<blockquote><para>An integer, defining the the width of the final image in pixels.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>xspan</emphasis></para>
+					<blockquote><para>Two semicolon seperated integers, defining the span of the x-axis. If xspan="-5;10" the minium value on the x-axis will be -5 and the maximun value on the x-axis will be 10. This parameter is very importent, because it defines coordinat space to be viewed.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>yspan</emphasis></para>
+					<blockquote><para>Two semicolon seperated integers, defining the span of the y-axis. If yspan="-5;10" the minium value on the y-axis will be -5 and the maximun value on the y-axis will be 10. This parameter is very importent, because it defines coordinat space to be viewed.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>axis</emphasis></para>
+					<blockquote><para>Enable or disable axis, whether or not to show axis x=0 and y=0. Defaults to true, valid values are: "true" or "false".</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>grid</emphasis></para>
+					<blockquote><para>Enable or disable grid, whether or not to show grid, that makes it easier to read the plot. Defaults to true, valid values are: "true" or "false".</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>gridspace</emphasis></para>
+					<blockquote><para>Two semicolon seperated integers, defining the space between the line of the grid. If this is not defined, WikiPlot will calculate some appropriate values, but these might not always look good. If gridspace="10;20" the distance between the gridlines on the x-axis will be 10 and the distance between the gridlines on the x-axis will be 20.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>gridfont</emphasis></para>
+					<blockquote><para>An integer representing font type of the labels at the grid, fonts 1-5 are builtin and represents different font sizes 1 being smallest and 5 biggest, defaults to 1.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>gridcolor</emphasis></para>
+					<blockquote><para>Three semicolon seperated integers, defining the color of the gridlines, defaults to gray. This gridcolor="240,240,240" is an RGB (Red,Green,Blue) representation of variant of the color gray.</para></blockquote>
+				</listitem>
+			</itemizedlist>
+		</refsect2>
+		<refsect2>
+			<title>graph parameters and content</title>
+			<para>The graph tags represents different mathematical expressions, that are to be plotted onto the coordinate-system defined by the surrounding/parent wikiplot tag. The graph tag contains the mathematical expression, it is representing. This mathematical expression may contain the variable x, and following mathematical functions:</para>
+			<itemizedlist>
+				<listitem>sin()</listitem>
+				<listitem>sinh()</listitem>
+				<listitem>arcsin()</listitem>
+				<listitem>asin()</listitem>
+				<listitem>arcsinh()</listitem>
+				<listitem>asinh()</listitem>
+				<listitem>cos()</listitem>
+				<listitem>cosh()</listitem>
+				<listitem>arccos()</listitem>
+				<listitem>acos()</listitem>
+				<listitem>arccosh()</listitem>
+				<listitem>acosh()</listitem>
+				<listitem>tan()</listitem>
+				<listitem>tanh()</listitem>
+				<listitem>arctan()</listitem>
+				<listitem>atan()</listitem>
+				<listitem>arctanh()</listitem>
+				<listitem>atanh()</listitem>
+				<listitem>sqrt()</listitem>
+				<listitem>abs()</listitem>
+				<listitem>ln()</listitem>
+				<listitem>log()</listitem>
+			</itemizedlist>
+			<para>Apart from these mathematical functions you may also use following constants:</para>
+			<itemizedlist>
+				<listitem>e</listitem>
+				<listitem>pi</listitem>
+			</itemizedlist>
+			<para>And last but not least, you may also use following mathematical operators:</para>
+			<itemizedlist>
+				<listitem>+</listitem>
+				<listitem>-</listitem>
+				<listitem>*</listitem>
+				<listitem>/</listitem>
+				<listitem>^</listitem>
+			</itemizedlist>
+			<para>If you have any questions regarding these mathematical expressions feel free to contact us, or take a look at the source found in evalmath.class.php. We havn't documentated this class because we have not written it. The graph tag also takes certain parameters that allow you to affect the way it is represented on the plot. The graph tag take following parameters:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><emphasis>label</emphasis></para>
+					<blockquote><para>A label shown in the top left corner to identify the graph, this label will be printed in same color as the mathematical expression will be plotted. Leave empty or do not define this parameter, you do not want any label for your mathematical expression.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>color</emphasis></para>
+					<blockquote><para>Three semicolon seperated integers, defining the color of the label and plotted mathematical expression, defaults to black. This color="0,0,0" is an RGB (Red,Green,Blue) representation of the color black.</para></blockquote>
+				</listitem>
+			</itemizedlist>
+		</refsect2>
+		<refsect2>
+			<title>Complete Example</title>
+		<para>Following is an advanced example of how WikiPlot could be used. Normally you don't need to used all parameters, most basic ones are covered in depth in the WikiPlot Userguide. This is a pretty extrem example of how to use all parameters:</para>
+		<programlisting>
+<![CDATA[
+<wikiplot height="400" width="800" caption="Complete Example" xspan="-100;100" yspan="-200;200" gridspace="10;20" captionfont="4" gridfont="2" axis="true" grid="true">
+	<graph label="A red graph" color="255,0,0">x^2+4</graph>
+	<graph label="A blue graph" color="0,0,255">3*x-3</graph>
+</wikiplot>
+]]>
+		</programlisting>
+		</refsect2>
+	</refsect1>
+</refentry>
