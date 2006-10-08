@@ -5,9 +5,7 @@
 * This file, is supposed to be manipulated by the user, it contains settings for WikiPlot. Primarily for the caching functionallity.
 * 
 * @package WikiPlot
-* @license http://www.gnu.org/licenses/gpl.txt GNU General Public License
 * @author WikiPlot development team.
-* @copyright Copyright 2006, WikiPlot development team.
 */
 
 /**

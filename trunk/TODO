@@ -6,17 +6,21 @@ Known bugs:
   MaxX-MinX and MaxY-MinY is extrem, fix Get*GridSpace().
 
 TODO:
+
+	TODO for 1.1
 - plot.class.php Test a loop between MinX and MaxX instead of 0 and ImageWidth (See known bugs).
 - plot.class.php Autogeneration of colors.
+- WikiPlot.php	 Use width and height as x- and yspan if x-/yspan isn't provided.
 - plot.class.php Consider scaling image instead of generating new in Plot->GeneratePlot(), 
   when given ImageResource of wrong size.
+
+	TODO for 1.0 (show stoppers)
 - WikiPlot.php   Chech whether $argv are lower or uppercase perhaps mixed, and what to do about it!
-- WikiPlot.php	 Cleanup source and write documentation
-- 		 Generate tar.gz for installation and distribution
+- ../		 Generate tar.gz for installation and distribution
 - Example.php	 Create example of how to use plot.class.php, and intergrate it with documentation.
 
+
 Documentation:
-- WikiPlot.php	 Documentate source code.
 -		Write developers guide to plot.class.php
 - ../		Write README, INSTALL, CHANGELOG, LICENSE and add to phpdoc
 
