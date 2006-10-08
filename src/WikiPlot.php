@@ -1,6 +1,23 @@
 <?php
+/*
+Copyright (C) 2006 by the WikiPlot project authors (See http://code.google.com/p/WikiPlot).
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+*/
+
 /**
+* The MediaWiki extension
+*
+* This is the MediaWiki extension it self, everything else is just functions and liberaries for this file.
+*
 * @package WikiPlot
+* @license http://www.gnu.org/licenses/gpl.txt GNU General Public License
+* @author WikiPlot development team.
+* @copyright Copyright 2006, WikiPlot development team.
 */
 
 
@@ -25,8 +42,18 @@ require_once("xml.class.php");
 */
 require_once("cache.class.php");
 
+/**
+*Register the WikiPlot extension
+*
+*Makes sure the extension is called when MediaWiki is started.
+*/
 $wgExtensionFunctions[] = "wfWikiPlotExtension";
 
+/**
+*Add hooks
+*
+*Adds hooks so MediaWiki will perform callback, when it hits the wikiplot tag.
+*/
 function wfWikiPlotExtension() {
     global $wgParser;
     $wgParser->setHook( "wikiplot", "RenderWikiPlot" );
@@ -148,60 +175,71 @@ function WikiPlotDeserializeColor($value,&$SetTo)
 	}
 }
 
-# The callback function for rendering plot
-function RenderWikiPlot( $input, $argv, $parser = null  ) {
-	if (!$parser) $parser =& $GLOBALS['wgParser'];
-	# $argv is an array containing any arguments passed to the
-	# extension like <example argument="foo" bar>..
-	# Put this on the sandbox page:  (works in MediaWiki 1.5.5)
-	#   <example argument="foo" argument2="bar">Testing text **example** in between the new tags</example>
-
-$Plot = new Plot();
-
-WikiPlotDeserializeBoolean($argv["grid"],$Plot->EnableGrid);
-WikiPlotDeserializeBoolean($argv["axis"],$Plot->EnableAxis);
-
-WikiPlotDeserializeString($argv["caption"],$Plot->Caption);
-
-WikiPlotDeserializeMixed($argv["xspan"],$Plot->MinX,$Plot->MaxX);
-WikiPlotDeserializeMixed($argv["yspan"],$Plot->MinY,$Plot->MaxY);
-WikiPlotDeserializeMixed($argv["gridspace"],$Plot->XGridSpace,$Plot->YGridSpace);
-
-WikiPlotDeserializeInteger($argv["height"],$Plot->Height);
-WikiPlotDeserializeInteger($argv["width"],$Plot->Width);
-WikiPlotDeserializeInteger($argv["captionfont"],$Plot->CaptionFont);
-WikiPlotDeserializeInteger($argv["gridfont"],$Plot->GridFont);
-
-WikiPlotDeserializeColor($argv["gridcolor"],$Plot->GridColor);
-
-//TODO: remeber to use width and height as x- and yspan if x-/yspan isn't provided.
-/*
-WikiML specification
-<wikiplot grid="true" caption="Caption text" axis="true" xspan="-10;10" yspan="-10;10" height="20" width="20" gridspace="x;y" captionfont="5" gridfont="1" gridcolor="200,200,200">
-<graph label="Graph 1" color="0,0,255" font="3">5x^3</graph>
-<graph label="Graph 2" color="#449933" font="3">2x^2</graph>
-</wikiplot>
+/**
+*RenderWikiPlot CallBack function
+*
+*This is the function that handles MediaWiki callbacks, and renders the actual plot.
+*
+*@access private
+*@param string $input The content of the wikiplot tag
+*@param array $argv Hash-array of the parameters of the wikiplot tag, with parameter-name as key and parameter-value as value.
+*@param Parser $parser The parser of MediaWiki, if null parser is obtained from global variable
+*@uses WikiPlotDeserializeBoolean()
+*@uses WikiPlotDeserializeString()
+*@uses WikiPlotDeserializeMixed()
+*@uses WikiPlotDeserializeInteger()
+*@uses WikiPlotDeserializeColor()
+*@uses XMLParser
+*@uses Plot
+*@uses Graph
+*@uses Cache
+*@return string HTML that can be directly inserted into any website.
 */
-
-//Parsing Xml
-$XmlParser = new XMLParser($input);
-$Graphs = $XmlParser->CreateInputArray();
-
-foreach($Graphs as $Graph)
+function RenderWikiPlot($input, $argv, $parser = null)
 {
-	$G = new Graph;
-	if(!is_array($Graph[1]))
-	{
-		$G->Exp = $Graph[1];
-		WikiPlotDeserializeString($Graph[0]["label"],$G->Label);
-		WikiPlotDeserializeColor($Graph[0]["color"],$G->Color);
-	}else{
-		$G->Exp = $Graph[0];
-	}
-	array_push($Plot->Graphs,$G);
-}
+	//Get parser if not given as parameter
+	if (!$parser) $parser =& $GLOBALS['wgParser'];
+	/*Currently the parser*/
 
-//Render the plot
+	//Creating instance of plot
+	$Plot = new Plot();
+
+	//Getting and deserializing parameters
+	WikiPlotDeserializeBoolean($argv["grid"],$Plot->EnableGrid);
+	WikiPlotDeserializeBoolean($argv["axis"],$Plot->EnableAxis);
+
+	WikiPlotDeserializeString($argv["caption"],$Plot->Caption);
+
+	WikiPlotDeserializeMixed($argv["xspan"],$Plot->MinX,$Plot->MaxX);
+	WikiPlotDeserializeMixed($argv["yspan"],$Plot->MinY,$Plot->MaxY);
+	WikiPlotDeserializeMixed($argv["gridspace"],$Plot->XGridSpace,$Plot->YGridSpace);
+
+	WikiPlotDeserializeInteger($argv["height"],$Plot->Height);
+	WikiPlotDeserializeInteger($argv["width"],$Plot->Width);
+	WikiPlotDeserializeInteger($argv["captionfont"],$Plot->CaptionFont);
+	WikiPlotDeserializeInteger($argv["gridfont"],$Plot->GridFont);
+
+	WikiPlotDeserializeColor($argv["gridcolor"],$Plot->GridColor);
+
+	//Parsing Xml
+	$XmlParser = new XMLParser($input);
+	$Graphs = $XmlParser->CreateInputArray();
+
+	foreach($Graphs as $Graph)
+	{
+		$G = new Graph;
+		if(!is_array($Graph[1]))
+		{
+			$G->Exp = $Graph[1];
+			WikiPlotDeserializeString($Graph[0]["label"],$G->Label);
+			WikiPlotDeserializeColor($Graph[0]["color"],$G->Color);
+		}else{
+			$G->Exp = $Graph[0];
+		}
+		array_push($Plot->Graphs,$G);
+	}
+
+	//Render the plot
 
 	//Get instance of cache
 	$cache = new cache();
@@ -219,13 +257,6 @@ foreach($Graphs as $Graph)
 
 	$output = "<a href='$PlotURL' class='image' title='See the plot'><img src='$PlotURL'></a>";
 
-/*
-	//Render as wikitext:
-	//To use external images this must be enabled: $wgAllowExternalImages = true; remeber to inform user.
-	$localParser = new Parser();
-	$output = $localParser->parse(";Test:This is rendered wikitext", $parser->mTitle, $parser->mOptions); //Once we test this, remember to check if adding parameters true, false OR false, true OR false OR true... see http://meta.wikimedia.org/wiki/MediaWiki_extensions_FAQ for more information on wikitext rendering in extensions
-	$text = $output->getText();
-*/
 	return $output;
 }
 
