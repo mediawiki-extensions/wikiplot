@@ -26,7 +26,7 @@
 </wikiplot>
 ]]>
 		</programlisting>
-		<para>Okay that is possibly the shortest we can make it. I wouldn't be supprised if you would consider that a little too basic. So just to match some basic functionallity, we are going to add an other graph with the expression y(x)=3*x-3, and some optional parameters to modifly the output image.</para>
+		<para>Okay that is possibly the shortest we can make it. I would not be surprised if you would consider that a little too basic. So just to match some basic functionality, we are going to add an other graph with the expression y(x)=3*x-3, and some optional parameters to modify the output image.</para>
 		<programlisting>
 <![CDATA[
 <wikiplot height="200" width="200" caption="Simple plot" xspan="-100;100" yspan="-100;100">
@@ -35,8 +35,8 @@
 </wikiplot>
 ]]>
 		</programlisting>
-		<para>Now this is different. This will result in an image with width and heigth of 200 pixels. It will have a caption saying <emphasis>Simple plot</emphasis>. The image will be a clip of a coordinate space, where minimum X will be -100 and maximum X will be 100, same goes for Y. The image contain 2 lables in the corner, one saying <emphasis>Graph 1</emphasis> another saying <emphasis>Graph 2</emphasis>, one of them will have the color rgb(255,0,0) which is red. Apart from that there will also be 2 graphs.</para>
-		<para>To simplify the example have been splittede and explained here:</para>
+		<para>Now this is different. This will result in an image with width and height of 200 pixels. It will have a caption saying <emphasis>Simple plot</emphasis>. The image will be a clip of a coordinate space, where minimum X will be -100 and maximum X will be 100, same goes for Y. The image contain 2 labels in the corner, one saying <emphasis>Graph 1</emphasis> another saying <emphasis>Graph 2</emphasis>, one of them will have the color rgb(255,0,0) which is red. Apart from that there will also be 2 graphs.</para>
+		<para>To simplify the example, I have divided and explained it here:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
 				<para><emphasis>height</emphasis></para>
@@ -52,7 +52,7 @@
 			</listitem>
 			<listitem>
 				<para><emphasis>xspan and yspan</emphasis></para>
-				<blockquote><para>Values representing minimun x and maximun x, in coordinate space. It you set xspan="-50;75" the lowest x values on you image will be -50 and the heighest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completly similar except for the fact that they change the y or x coordiante space respectively.</para></blockquote>
+				<blockquote><para>Values representing minimum x and maximum x, in coordinate space. It you set xspan="-50;75" the lowest x values on you image will be -50 and the highest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completely similar except for the fact that they change the y or x coordinate space respectively.</para></blockquote>
 			</listitem>
 			<listitem>
 				<para><emphasis>x+4 and 3*x-3</emphasis></para>
@@ -68,6 +68,6 @@
 			</listitem>
 		</itemizedlist>
 
-		<para>If you do not understand this, please feel free to contact us, or post you question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confues users, so please help us improve.</para>
+		<para>If you do not understand this, please feel free to contact us, or post you question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confuse users, so please help us improve.</para>
 	</refsect1>
 </refentry>
