@@ -25,7 +25,7 @@ You should have received a copy of the GNU General Public License along with thi
  * XMLParser class
  * 
  * This class parses a given XML data to a multidimensional array by using
- * a user-defined tag. The default tag is <graph>. The exmple below explains
+ * a user-defined tag. The default tag is <graph>. The example below explains
  * how the class works.
  * <code>
  * <?php
@@ -45,8 +45,8 @@ You should have received a copy of the GNU General Public License along with thi
  *       (
  *           [0] => Array
  *               (
- *                   [COLOR] => 234,234,233
- *                   [LABEL] => string
+ *                   [color] => 234,234,233
+ *                   [label] => string
  *               )
  *           [1] => x^2+5
  *       )
