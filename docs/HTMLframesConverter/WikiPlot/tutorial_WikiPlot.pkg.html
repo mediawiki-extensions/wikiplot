@@ -12,7 +12,7 @@
 	<table class="tutorial-nav-box">
 	<tr>
 		<td style="width: 30%">
-							<span class="nav-button-disabled">Previous</span>
+							<a href="../WikiPlot/tutorial_AdminGuide.pkg.html" class="nav-button">Previous</a>
 					</td>
 		<td style="text-align: center">
 					</td>
@@ -22,6 +22,7 @@
 	</tr>
 	<tr>
 		<td style="width: 30%">
+							<span class="detail">WikiPlot Administrators Guide</span>
 					</td>
 		<td style="text-align: center">
 					</td>
@@ -31,7 +32,7 @@
 	</tr>
 </table>
 	
-<div><a name=""></a><div class="ref-title-box">WikiPlot Userguide<h1 class="ref-title">WikiPlot Userguide</h1>
+<div><a name=""></a><div class="ref-title-box"><h1 class="ref-title">WikiPlot Userguide</h1>
 		<h2 class="ref-purpose">Introduction to WikiPlot</h2></div>
 	<div class="ref-synopsis"><p>The WikiPlot Development Team.</p>
 			<div class="authors"><h2 class="title">Authors</h2><span class="author">Jonas F. Jensen.
@@ -44,15 +45,15 @@
 	&lt;graph&gt;x+4&lt;/graph&gt;
 &lt;/wikiplot&gt;
 </pre></div>
-		<p>Okay that is possibly the shortest we can make it. I wouldn't be supprised if you would consider that a little too basic. So just to match some basic functionallity, we are going to add an other graph with the expression y(x)=3*x-3, and some optional parameters to modifly the output image.</p>
+		<p>Okay that is possibly the shortest we can make it. I would not be surprised if you would consider that a little too basic. So just to match some basic functionality, we are going to add an other graph with the expression y(x)=3*x-3, and some optional parameters to modify the output image.</p>
 		<div class="src-code"><pre>
 &lt;wikiplot height=&quot;200&quot; width=&quot;200&quot; caption=&quot;Simple plot&quot; xspan=&quot;-100;100&quot; yspan=&quot;-100;100&quot;&gt;
 	&lt;graph label=&quot;Graph 1.&quot; color=&quot;255,0,0&quot;&gt;x+4&lt;/graph&gt;
 	&lt;graph label=&quot;Graph 2.&quot;&gt;3*x-3&lt;/graph&gt;
 &lt;/wikiplot&gt;
 </pre></div>
-		<p>Now this is different. This will result in an image with width and heigth of 200 pixels. It will have a caption saying <em>Simple plot</em>. The image will be a clip of a coordinate space, where minimum X will be -100 and maximum X will be 100, same goes for Y. The image contain 2 lables in the corner, one saying <em>Graph 1</em> another saying <em>Graph 2</em>, one of them will have the color rgb(255,0,0) which is red. Apart from that there will also be 2 graphs.</p>
-		<p>To simplify the example have been splittede and explained here:</p>
+		<p>Now this is different. This will result in an image with width and height of 200 pixels. It will have a caption saying <em>Simple plot</em>. The image will be a clip of a coordinate space, where minimum X will be -100 and maximum X will be 100, same goes for Y. The image contain 2 labels in the corner, one saying <em>Graph 1</em> another saying <em>Graph 2</em>, one of them will have the color rgb(255,0,0) which is red. Apart from that there will also be 2 graphs.</p>
+		<p>To simplify the example, I have divided and explained it here:</p>
 		<ul mark = "bullet"><li><p><em>height</em></p>
 				<blockquote><p>Height of the output image in pixels.</p></blockquote></li>
 			<li><p><em>width</em></p>
@@ -60,7 +61,7 @@
 			<li><p><em>caption</em></p>
 				<blockquote><p>Caption on the output image.</p></blockquote></li>
 			<li><p><em>xspan and yspan</em></p>
-				<blockquote><p>Values representing minimun x and maximun x, in coordinate space. It you set xspan=&quot;-50;75&quot; the lowest x values on you image will be -50 and the heighest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completly similar except for the fact that they change the y or x coordiante space respectively.</p></blockquote></li>
+				<blockquote><p>Values representing minimum x and maximum x, in coordinate space. It you set xspan=&quot;-50;75&quot; the lowest x values on you image will be -50 and the highest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completely similar except for the fact that they change the y or x coordinate space respectively.</p></blockquote></li>
 			<li><p><em>x+4 and 3*x-3</em></p>
 				<blockquote><p>These are mathematical expressions defining the 2 graphs on the image.</p></blockquote></li>
 			<li><p><em>label</em></p>
@@ -68,12 +69,12 @@
 			<li><p><em>color</em></p>
 				<blockquote><p>Color of the graph, in an RGB (Red,Green,Blue) representation.</p></blockquote></li></ul>
 
-		<p>If you do not understand this, please feel free to contact us, or post you question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confues users, so please help us improve.</p></span></div>
+		<p>If you do not understand this, please feel free to contact us, or post you question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confuse users, so please help us improve.</p></span></div>
 
 	<table class="tutorial-nav-box">
 	<tr>
 		<td style="width: 30%">
-							<span class="nav-button-disabled">Previous</span>
+							<a href="../WikiPlot/tutorial_AdminGuide.pkg.html" class="nav-button">Previous</a>
 					</td>
 		<td style="text-align: center">
 					</td>
@@ -83,6 +84,7 @@
 	</tr>
 	<tr>
 		<td style="width: 30%">
+							<span class="detail">WikiPlot Administrators Guide</span>
 					</td>
 		<td style="text-align: center">
 					</td>
@@ -93,7 +95,7 @@
 </table>
 	
 	<p class="notes" id="credit">
-		Documentation generated on Sat, 07 Oct 2006 14:48:16 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0</a>
+		Documentation generated on Mon, 09 Oct 2006 16:16:00 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0</a>
 	</p>
 	</div></body>
 </html>
