@@ -175,7 +175,7 @@ class XMLParser {
     * @uses ExplodeInputData()
     * @uses Parse()
     * @uses OpenTag()
-    * @uses ColseTag()
+    * @uses CloseTag()
     * @uses GetCharData()
     */
    function XMLParser($Data)
@@ -369,7 +369,7 @@ class XMLParser {
     * stored in the $Graph which is returned at the end of the
     * proces.
     *
-    * @access buplic
+    * @access public
     * @return $Graph
     * @uses $Tags
     * @uses XMLParser
