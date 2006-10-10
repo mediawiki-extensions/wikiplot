@@ -41,7 +41,7 @@ DESCRIPTION
     which are stored in the object.  Try it, it's fun!
 
 METHODS
-    $m->evalute($expr)
+    $m->evaluate($expr)
         Evaluates the expression and returns the result.  If an error occurs,
         prints a warning and returns false.  If $expr is a function assignment,
         returns true on success.
