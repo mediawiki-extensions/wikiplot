@@ -14,3 +14,7 @@ http://groups.google.com/group/wikiplot
 
 Announcement list:
 http://groups.google.com/group/wikiplot-announcements
+
+Known bugs:
+- Problems with plotting functions like tan(x)
+- Problems with grid, when no apropriate gridspace defined, and difference on xspan and yspan is extreme.
