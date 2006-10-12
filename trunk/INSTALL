@@ -1,0 +1,12 @@
+WikiPlot installation
+
+To install WikiPlot copy the source to your extensions directory of your MediaWiki installation /extension/WikiPlot/
+
+Then include WikiPlot.php in the LocalSettings.php of your MediaWiki installation. With following line:
+require_once("extensions/WikiPlot/WikiPlot.php");
+
+Once that is done, create a directory for the cache with chmod of 777. And modify the settings in WikiPlotSettings.php
+
+If you have any problems with installation take a look at the "Administrators Guide" in our documentation. Or feel free to join our mailinglist where you can ask about anything:
+
+http://groups.google.com/group/wikiplot
