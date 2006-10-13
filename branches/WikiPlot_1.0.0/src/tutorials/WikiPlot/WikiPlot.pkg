@@ -1,0 +1,79 @@
+<refentry id="{@id}">
+	<refnamediv>
+		<refname>WikiPlot Userguide</refname>
+		<refpurpose>Introduction to WikiPlot</refpurpose>
+	</refnamediv>
+	<refsynopsisdiv>
+		<para>The WikiPlot Development Team.</para>
+			<authorgroup>
+				<author>
+				Jonas F. Jensen.
+				<authorblurb>
+				{@link mailto:wikiplot@jopsen.dk WikiPlot@Jopsen.dk}
+				</authorblurb>
+			</author>
+			<author>
+			Ismail Faizi
+				<authorblurb>
+					{@link mailto:kanafghan@gmail.com KanAfghan@Gmail.com}
+				</authorblurb>
+			</author>			
+		</authorgroup>
+	</refsynopsisdiv>
+	<refsect1 id="{@id UserGuide}">
+		<title>WikiPlot Userguide</title>
+		<para>This is s simple guide to learn and become familiar with WikiPlot syntax, if the WikiPlot extension is installed on the wiki you wish to modify, you can add simply just type the WikiPlot syntax in your file. This chapter will not document all the features of WikiPlot but just the basics.</para>
+		<para>First things first, let's start with a short introduction our terminology. We have one plot and one or more graphs (Note the words I just used). Where plot defines the coordinate space, width, height and axes of the final image. A plot contains one or more graph, which is expressed with a mathematical expression (for instance: x^2+4x+5). If you thing this is wired, hold on there, I will clarify in just a moment.</para>
+		<para>Now let's get dirty, following code will generate an image with 1 graph, from the expression y(x)=x+4.</para>
+		<programlisting>
+<![CDATA[
+<wikiplot>
+	<graph>x+4</graph>
+</wikiplot>
+]]>
+		</programlisting>
+		<para>Okay that is possibly the shortest we can make it. I would not be surprised if you would consider that a little too basic. So just to match some basic functionality, we are going to add another graph with the expression y(x)=3*x-3, and some optional parameters to modify the output image.</para>
+		<programlisting>
+<![CDATA[
+<wikiplot height="200" width="200" caption="Simple plot" xspan="-100;100" yspan="-100;100">
+	<graph label="Graph 1." color="255,0,0">x+4</graph>
+	<graph label="Graph 2.">3*x-3</graph>
+</wikiplot>
+]]>
+		</programlisting>
+		<para>Now this is different. This will result in an image with width and height of 200 pixels. It will have a caption saying <emphasis>Simple plot</emphasis>. The image will be a clip of a coordinate space, where minimum X will be -100 and maximum X will be 100, same goes for Y. The image contain 2 labels in the corner, one saying <emphasis>Graph 1</emphasis> another saying <emphasis>Graph 2</emphasis>, one of them will have the color rgb(255,0,0) which is red. Apart from that there will also be 2 graphs.</para>
+		<para>To simplify the example, I have divided and explained it here:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para><emphasis>height</emphasis></para>
+				<blockquote><para>Height of the output image in pixels.</para></blockquote>
+			</listitem>
+			<listitem>
+				<para><emphasis>width</emphasis></para>
+				<blockquote><para>Width of the output image in pixels.</para></blockquote>
+			</listitem>
+			<listitem>
+				<para><emphasis>caption</emphasis></para>
+				<blockquote><para>Caption on the output image.</para></blockquote>
+			</listitem>
+			<listitem>
+				<para><emphasis>xspan and yspan</emphasis></para>
+				<blockquote><para>Values representing minimum x and maximum x, in coordinate space. If you set xspan="-50;75" the lowest x values on your image will be -50 and the highest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completely similar except for the fact that they change the y or x coordinate space respectively.</para></blockquote>
+			</listitem>
+			<listitem>
+				<para><emphasis>x+4 and 3*x-3</emphasis></para>
+				<blockquote><para>These are mathematical expressions defining the 2 graphs on the image.</para></blockquote>
+			</listitem>
+			<listitem>
+				<para><emphasis>label</emphasis></para>
+				<blockquote><para>Labels that are placed in the corner of the image, displayed in the same color as the graphs they represent.</para></blockquote>
+			</listitem>
+			<listitem>
+				<para><emphasis>color</emphasis></para>
+				<blockquote><para>Color of the graph, in an RGB (Red,Green,Blue) representation.</para></blockquote>
+			</listitem>
+		</itemizedlist>
+
+		<para>If you do not understand this, please feel free to contact us, or post your question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confuse users, so please help us improve.</para>
+	</refsect1>
+</refentry>

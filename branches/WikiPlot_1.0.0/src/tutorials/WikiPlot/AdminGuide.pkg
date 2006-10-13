@@ -1,0 +1,66 @@
+<refentry id="{@id}">
+	<refnamediv>
+		<refname>WikiPlot Administrators Guide</refname>
+		<refpurpose>A System Administrators Guidelines</refpurpose>
+	</refnamediv>
+	<refsynopsisdiv>
+		<para>The WikiPlot Development Team.</para>
+			<authorgroup>
+				<author>
+				Jonas F. Jensen.
+				<authorblurb>
+				{@link mailto:wikiplot@jopsen.dk WikiPlot@Jopsen.dk}
+				</authorblurb>
+			</author>
+			<author>
+			Ismail Faizi
+				<authorblurb>
+					{@link mailto:kanafghan@gmail.com KanAfghan@Gmail.com}
+				</authorblurb>
+			</author>			
+		</authorgroup>
+	</refsynopsisdiv>
+	<refsect1 id="{@id AdminGuide}">
+	<para>This guide is intended for system administrators. It will help you install WikiPlot, and maintain your installation updated, with as little effort as possible. If you are maintainer/administrator of a MediaWiki installation, this is your guide for WikiPlot.</para>
+		<refsect2>
+			<title>Installation</title>
+			<para>WikiPlot can be installed as any other {@link http://meta.wikimedia.org/wiki/MediaWiki_extensions MediaWiki extension}, first you obtain a copy of WikiPlot, we recommend that you download the latest stable from our {@link http://wikiplot.googlecode.com/svn/web/index.html homepage}. You can also checkout a(n) (un)stable from SVN, but if you do that you must also rename some directories and stuff, which is not covered here.</para>
+			<para>Once you have obtained a stable copy of WikiPlot, extract it and place the WikiPlot directory in the extensions directory of your MediaWiki installation. Now you will have to activate your extension in the LocalSettings.php file of your MediaWiki installation. This is done by adding following line:</para>
+			<programlisting>
+<![CDATA[
+//Enable the WikiPlot extension
+require_once("extensions/WikiPlot/WikiPlot.php");
+]]>
+			</programlisting>
+			<para>Now you have installed the WikiPlot extension, but you are NOT all done yet. WikiPlot requires access to a cache, before it can work. Configuration of WikiPlot and its cache is covered next.</para>
+		</refsect2>
+		<refsect2>
+			<title>Settings/Caching</title>
+			<para>Once you have installed WikiPlot, you must configure its cache before you can use WikiPlot. First you must have a place to save cached images, create an empty directory and give php write permissions to the directory (hint: the directory must be accessible from http). Once you have created a directory for the cache, you must tell WikiPlot where this directory is located, you do that by opening WikiPlotSettings.php from extensions/WikiPlot/WikiPlotSettings.php, and redefining the constants defined there. Like this:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><emphasis>WikiPlotCachePath</emphasis></para>
+					<blockquote><para>The path to the cache directory you have just created. This path is relative to DOCUMENT_ROOT, your DOCUMENT_ROOT is usually /public_html/, which means that if your cache directory is in /public_html/catch/ then WikiPlotCachePath should be /cache/. You can find your DOCUMENT_ROOT in your phpinfo() data.</para></blockquote>
+				</listitem>
+				<listitem>
+					<para><emphasis>WikiPlotCacheURL</emphasis></para>
+					<blockquote><para>The path to the cache directory is the same directory as used in WikiPlotCachePath, but this time your path is relative to http://, which means that if your site is mysite.com and your cache directory is placed in DOCUMENT_ROOT (usually /public_html/) then the URL (WikiPlotCacheURL) to your cache should be http://mysite.com/cache/</para></blockquote>
+				</listitem>
+			</itemizedlist>
+			<para>More specific configuration of your cache can be done in WikiPlotSettings.php, if you have any questions regarding these settings, take a look at the sourcecode documentation or feel free to contact us. More advanced configuration of the cache is not covered here.</para>
+			<refsect3>
+				<title>Keep the cache clean</title>
+				<para>If your users uses WikiPlot a lot, and changes the plots a lot, WikiPlot will generate an awful lot of unused images in the cache, at some point this might be considered a waste of server resources. Therefore it is recommended that you cleanup the catch on a regular basis. You can cleanup the cache by running /extensions/WikiPlot/CleanupCache.php, you may run this script as a cron job.</para>
+				<para>The script removes all images that have not been accessed for a given period. It is also possible to remove all images of a certain age. You can find the settings for this file in WikiPlotSettings.php, advanced configuration of this script is not covered here, see sourcecode documentation for further information.</para>
+			</refsect3>
+		</refsect2>
+		<refsect2>
+			<title>Stay updated</title>
+			<para>Once you have installed WikiPlot, you might want to make sure that your installation is kept updated, both for security and performance reasons. And perhaps there will come some new features as well. To stay updated on the WikiPlot releases subscribe to our {@link http://groups.google.com/group/wikiplot-announcements announcement list}, members of this list will only be contacted regarding new releases, and in case of serious security issues. Subscribe and stay updated.</para>
+		</refsect2>
+		<refsect2>
+			<title>Support/Help</title>
+			<para>If you have any questions or problems with WikiPlot, feel free to contact us, you can use our {@link http://groups.google.com/group/wikiplot development mailinglist}. It is not just a list for WikiPlot development, but a list for everything regarding WikiPlot, help, bug, questions and what ever.</para>
+		</refsect2>
+	</refsect1>
+</refentry>
