@@ -12,11 +12,17 @@
 				{@link mailto:wikiplot@jopsen.dk WikiPlot@Jopsen.dk}
 				</authorblurb>
 			</author>
+			<author>
+			Ismail Faizi
+				<authorblurb>
+					{@link mailto:kanafghan@gmail.com KanAfghan@Gmail.com}
+				</authorblurb>
+			</author>			
 		</authorgroup>
 	</refsynopsisdiv>
 	<refsect1 id="{@id UserGuide}">
 		<title>WikiPlot Userguide</title>
-		<para>This is s simple guide to learn and become familiar with WikiPlot syntax, if the WikiPlot extension is installed on the wiki you wish to modify, you can add simply just type the WikiPlot syntax in you file. This chapter will not document all the features of WikiPlot but just the basics.</para>
+		<para>This is s simple guide to learn and become familiar with WikiPlot syntax, if the WikiPlot extension is installed on the wiki you wish to modify, you can add simply just type the WikiPlot syntax in your file. This chapter will not document all the features of WikiPlot but just the basics.</para>
 		<para>First things first, let's start with a short introduction our terminology. We have one plot and one or more graphs (Note the words I just used). Where plot defines the coordinate space, width, height and axes of the final image. A plot contains one or more graph, which is expressed with a mathematical expression (for instance: x^2+4x+5). If you thing this is wired, hold on there, I will clarify in just a moment.</para>
 		<para>Now let's get dirty, following code will generate an image with 1 graph, from the expression y(x)=x+4.</para>
 		<programlisting>
@@ -26,7 +32,7 @@
 </wikiplot>
 ]]>
 		</programlisting>
-		<para>Okay that is possibly the shortest we can make it. I would not be surprised if you would consider that a little too basic. So just to match some basic functionality, we are going to add an other graph with the expression y(x)=3*x-3, and some optional parameters to modify the output image.</para>
+		<para>Okay that is possibly the shortest we can make it. I would not be surprised if you would consider that a little too basic. So just to match some basic functionality, we are going to add another graph with the expression y(x)=3*x-3, and some optional parameters to modify the output image.</para>
 		<programlisting>
 <![CDATA[
 <wikiplot height="200" width="200" caption="Simple plot" xspan="-100;100" yspan="-100;100">
@@ -52,7 +58,7 @@
 			</listitem>
 			<listitem>
 				<para><emphasis>xspan and yspan</emphasis></para>
-				<blockquote><para>Values representing minimum x and maximum x, in coordinate space. It you set xspan="-50;75" the lowest x values on you image will be -50 and the highest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completely similar except for the fact that they change the y or x coordinate space respectively.</para></blockquote>
+				<blockquote><para>Values representing minimum x and maximum x, in coordinate space. If you set xspan="-50;75" the lowest x values on your image will be -50 and the highest will be 75. This does not have anything with width to do, and is in no way related to pixels! This feature enables you to zoom in and out on the coordinate space, independent of image size. xspan and yspan are completely similar except for the fact that they change the y or x coordinate space respectively.</para></blockquote>
 			</listitem>
 			<listitem>
 				<para><emphasis>x+4 and 3*x-3</emphasis></para>
@@ -68,6 +74,6 @@
 			</listitem>
 		</itemizedlist>
 
-		<para>If you do not understand this, please feel free to contact us, or post you question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confuse users, so please help us improve.</para>
+		<para>If you do not understand this, please feel free to contact us, or post your question at http://groups.google.com/group/wikiplot and we will hurry to help. We are well aware that our terminology is very bad, and that some of our syntax might confuse users, so please help us improve.</para>
 	</refsect1>
 </refentry>
