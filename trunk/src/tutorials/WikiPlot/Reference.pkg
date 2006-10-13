@@ -12,11 +12,17 @@
 					{@link mailto:wikiplot@jopsen.dk WikiPlot@Jopsen.dk}
 				</authorblurb>
 			</author>
-		</authorgroup>
+			<author>
+			Ismail Faizi
+				<authorblurb>
+					{@link mailto:kanafghan@gmail.com KanAfghan@Gmail.com}
+				</authorblurb>
+			</author>
+			</authorgroup>
 	</refsynopsisdiv>
 	<refsect1 id="{@id Reference}">
 		<title>WikiPlot Syntax Reference</title>
-		<para>This is a complete syntax reference for WikiPlot, if you are note familiar with xml or the most common WikiPlot syntax, it is recommend that you read the WikiPlot UserGuide first. Below you will find a documentation of the parameters and content for the wikiplot and graph tag,  respectively. At the end of the article you will find a complete example of a plot with use of all parameters.</para>
+		<para>This is a complete syntax reference for WikiPlot, if you are note familiar with xml or the most common MediaWiki syntax, it is recommended that you read the WikiPlot UserGuide first. Below you will find a documentation of the parameters and content for the wikiplot and graph tag,  respectively. At the end of the article you will find a complete example of a plot with use of all parameters.</para>
 		<refsect2>
 			<title>wikiplot parameters and content</title>
 			<para>The wikiplot tag contains one or more graph tags, the graph tags defines the different mathematical expressions to be plotted. The wikiplot tag defines the image/environment/coordinate-system these mathematical expressions are to be plotted upon. The wikiplot tag takes following parameters:</para>
@@ -35,7 +41,7 @@
 				</listitem>
 				<listitem>
 					<para><emphasis>width</emphasis></para>
-					<blockquote><para>An integer, defining the the width of the final image in pixels.</para></blockquote>
+					<blockquote><para>An integer, defining the width of the final image in pixels.</para></blockquote>
 				</listitem>
 				<listitem>
 					<para><emphasis>xspan</emphasis></para>
@@ -107,11 +113,11 @@
 				<listitem>/</listitem>
 				<listitem>^</listitem>
 			</itemizedlist>
-			<para>If you have any questions regarding these mathematical expressions feel free to contact us, or take a look at the source found in evalmath.class.php. We have not documented this class because we have not written it. The graph tag also takes certain parameters that allow you to affect the way it is represented on the plot. The graph tag take following parameters:</para>
+			<para>If you have any questions regarding these mathematical expressions feel free to contact us, or take a look at the source found in evalmath.class.php. We have not documented this class because we have not written it. The graph tag also takes certain parameters that allow you to affect the way it is represented on the plot. The graph tag takes following parameters:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para><emphasis>label</emphasis></para>
-					<blockquote><para>A label shown in the top left corner to identify the graph, this label will be printed in same color as the mathematical expression will be plotted. Leave empty or do not define this parameter, you do not want any label for your mathematical expression.</para></blockquote>
+					<blockquote><para>A label shown in the top left corner to identify the graph, this label will be printed in same color as the mathematical expression will be plotted. Leave empty or do not define this parameter, if you do not want any label for your mathematical expression.</para></blockquote>
 				</listitem>
 				<listitem>
 					<para><emphasis>color</emphasis></para>

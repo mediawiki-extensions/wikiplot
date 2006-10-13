@@ -1,8 +1,9 @@
 <?
 /**
-* Evalution of expressions
+* File containing EvalMath and EvalMathStack classes
 * 
-* Safe evaluation of mathematical expressions
+* EvalMath class is used to evaluate math expressions safely, while the EvalMathStack
+* class is used by EvalMath.
 * 
 * @package WikiPlot
 * @subpackage PlotClass
@@ -94,6 +95,14 @@ LICENSE
 
 */
 
+/**
+* Evalution of expressions
+* 
+* The class is used to evaluate mathematical expressions very safely
+* 
+* @package WikiPlot
+* @subpackage PlotClass
+*/
 class EvalMath {
 
     var $suppress_errors = false;
@@ -371,6 +380,15 @@ class EvalMath {
 }
 
 // for internal use
+
+/**
+* Required by EvalMath class
+* 
+* The class is used by EvalMath class internally 
+* 
+* @package WikiPlot
+* @subpackage PlotClass
+*/
 class EvalMathStack {
 
     var $stack = array();

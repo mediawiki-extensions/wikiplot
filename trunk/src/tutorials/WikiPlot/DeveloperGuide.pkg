@@ -6,12 +6,18 @@
 	<refsynopsisdiv>
 		<para>The WikiPlot Development Team.</para>
 			<authorgroup>
-				<author>
+			<author>
 				Jonas F. Jensen.
 				<authorblurb>
 				{@link mailto:wikiplot@jopsen.dk WikiPlot@Jopsen.dk}
 				</authorblurb>
 			</author>
+			<author>
+				Ismail Faizi
+				<authorblurb>
+				{@link mailto:kanafghan@gmail.com KanAfghan@Gmail.com}
+				</authorblurb>
+			</author>			
 		</authorgroup>
 	</refsynopsisdiv>
 	<refsect1 id="{@id DeveloperGuide}">
@@ -19,7 +25,7 @@
 		<para>PlotClass is the set of classes that enable WikiPlot to create plots from mathematical expressions. This is a small guide to help other developers take advantage of the PlotClass. PlotClass consists of plot.class.php and graph.plot.class.php, and it depends on MathEval.class.php. Here we will focus on how you could use PlotClass to creating plot form mathematical expression in your applications.</para>
 		<refsect2>
 			<title>Class structure</title>
-			<para>I PlotClass the most importent classes are plot and graph. If plot is the paper, then graph are the mathematical expressions to be plotted onto the paper. The class plot contains settings for the output image and the coordinate space the mathematical expressions are to be plotted upon. The class plot also contains an array of graph to be plotted. A graph class represents a mathematical expression, it's label and other settings related to the mathematical expression. You might consider this a somewhat odd terminology, but feel free to contact us if you have a less confusing one.</para>
+			<para>In PlotClass the most importent classes are plot and graph. If plot is the paper, then graph are the mathematical expressions to be plotted onto the paper. The class plot contains settings for the output image and the coordinate space the mathematical expressions are to be plotted upon. The class plot also contains an array of graph to be plotted. A graph class represents a mathematical expression, it's label and other settings related to the mathematical expression. You might consider this a somewhat odd terminology, but feel free to contact us if you have a less confusing one.</para>
 		</refsect2>
 		<refsect2>
 			<title>Example</title>
