@@ -1,0 +1,964 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="phpDocumentor 1.3.0RC3 http://www.phpdoc.org">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Tutorials">
+		<param name="Local" value="WikiPlotWikiPlot Userguide\tutorial_WikiPlot.pkg.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PlotClass Developer Guide">
+		<param name="Local" value="WikiPlotPlotClass Developer Guide\tutorial_DeveloperGuide.pkg.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlot Syntax Reference">
+		<param name="Local" value="WikiPlotWikiPlot Syntax Reference\tutorial_Reference.pkg.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlot Userguide">
+		<param name="Local" value="WikiPlotWikiPlot Userguide\tutorial_WikiPlot.pkg.html">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlot Administrators Guide">
+		<param name="Local" value="WikiPlotWikiPlot Administrators Guide\tutorial_AdminGuide.pkg.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PlotClass Developer Guide">
+		<param name="Local" value="WikiPlotPlotClass Developer Guide\tutorial_DeveloperGuide.pkg.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlot Syntax Reference">
+		<param name="Local" value="WikiPlotWikiPlot Syntax Reference\tutorial_Reference.pkg.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlot Userguide">
+		<param name="Local" value="WikiPlotWikiPlot Userguide\tutorial_WikiPlot.pkg.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Files">
+		<param name="Local" value="WikiPlot\_xml_class_php.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupCache.php">
+		<param name="Local" value="WikiPlot\_CleanupCache_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="evalmath.class.php">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_evalmath_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="graph.plot.class.php">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_graph_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="plot.class.php">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlot.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotSettings.php">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="xml.class.php">
+		<param name="Local" value="WikiPlot\_xml_class_php.html">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cache.class.php">
+		<param name="Local" value="WikiPlot\_cache_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Require_once">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cache.class.php">
+		<param name="Local" value="WikiPlot\_CleanupCache_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="'evalmath.class.php'">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="'graph.plot.class.php'">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="xml.class.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cache.class.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PlotClass/plot.class.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotSettings.php">
+		<param name="Local" value="WikiPlot\_cache_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Classes">
+		<param name="Local" value="WikiPlot\XMLParser.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMath">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMathStack">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Graph">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Plot">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMLParser">
+		<param name="Local" value="WikiPlot\XMLParser.html">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Cache">
+		<param name="Local" value="WikiPlot\Cache.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Cache Methods">
+		<param name="Local" value="WikiPlot\Cache.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupCache">
+		<param name="Local" value="WikiPlot\Cache.html#methodCleanupCache">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupMaxAge">
+		<param name="Local" value="WikiPlot\Cache.html#methodCleanupMaxAge">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupUnused">
+		<param name="Local" value="WikiPlot\Cache.html#methodCleanupUnused">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileExist">
+		<param name="Local" value="WikiPlot\Cache.html#methodFileExist">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileURL">
+		<param name="Local" value="WikiPlot\Cache.html#methodFileURL">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CachePath">
+		<param name="Local" value="WikiPlot\Cache.html#methodCachePath">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupCache">
+		<param name="Local" value="WikiPlot\Cache.html#methodCleanupCache">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupMaxAge">
+		<param name="Local" value="WikiPlot\Cache.html#methodCleanupMaxAge">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupUnused">
+		<param name="Local" value="WikiPlot\Cache.html#methodCleanupUnused">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileExist">
+		<param name="Local" value="WikiPlot\Cache.html#methodFileExist">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileURL">
+		<param name="Local" value="WikiPlot\Cache.html#methodFileURL">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CleanupCache.php">
+		<param name="Local" value="WikiPlot\_CleanupCache_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cache.class.php">
+		<param name="Local" value="WikiPlot\_CleanupCache_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="evalmath.class.php">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_evalmath_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMath">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMath Properties">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$fb">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$fb">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$last_error">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$last_error">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$suppress_errors">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$suppress_errors">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$v">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$v">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$vb">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$vb">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$f">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$f">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$fb">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$fb">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$last_error">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$last_error">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$suppress_errors">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$suppress_errors">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$v">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$v">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$vb">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#var$vb">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMath Methods">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="e">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methode">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="evaluate">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodevaluate">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="funcs">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodfuncs">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="nfx">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodnfx">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pfx">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodpfx">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="trigger">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodtrigger">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="vars">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodvars">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMath">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodEvalMath">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="e">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methode">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="evaluate">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodevaluate">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="funcs">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodfuncs">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="nfx">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodnfx">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pfx">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodpfx">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="trigger">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodtrigger">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="vars">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMath.html#methodvars">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMathStack">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMathStack Properties">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$stack">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#var$stack">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$count">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#var$count">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$stack">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#var$stack">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EvalMathStack Methods">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pop">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#methodpop">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="push">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#methodpush">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="last">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#methodlast">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pop">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#methodpop">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="push">
+		<param name="Local" value="WikiPlot\PlotClass\EvalMathStack.html#methodpush">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="graph.plot.class.php">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_graph_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Graph">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Graph Properties">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$EnableLabel">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$EnableLabel">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Exp">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$Exp">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Label">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$Label">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$LabelFont">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$LabelFont">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Color">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$Color">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$EnableLabel">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$EnableLabel">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Exp">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$Exp">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Label">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$Label">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$LabelFont">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#var$LabelFont">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Graph Methods">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html">
+		</OBJECT>
+	<UL>
+	
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetHash">
+		<param name="Local" value="WikiPlot\PlotClass\Graph.html#methodGetHash">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="plot.class.php">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="'evalmath.class.php'">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="'graph.plot.class.php'">
+		<param name="Local" value="WikiPlot\PlotClass\_PlotClass_plot_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Plot">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Plot Properties">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Caption">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Caption">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$CaptionFont">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$CaptionFont">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$EnableAxis">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$EnableAxis">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$EnableGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$EnableGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Graphs">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Graphs">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$GridColor">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$GridColor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$GridFont">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$GridFont">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Height">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Height">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MaxX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MaxX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MaxY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MaxY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MinX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MinX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MinY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MinY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Width">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Width">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$XGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$XGridSpace">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$YGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$YGridSpace">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$BackgroundColor">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$BackgroundColor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Caption">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Caption">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$CaptionFont">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$CaptionFont">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$EnableAxis">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$EnableAxis">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$EnableGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$EnableGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Graphs">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Graphs">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$GridColor">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$GridColor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$GridFont">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$GridFont">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Height">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Height">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MaxX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MaxX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MaxY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MaxY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MinX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MinX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$MinY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$MinY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Width">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$Width">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$XGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$XGridSpace">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$YGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#var$YGridSpace">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Plot Methods">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawAxis">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawAxis">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawCaption">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawCaption">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawPlots">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawPlots">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawXGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawXGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawYGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawYGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GeneratePlot">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGeneratePlot">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetCoordinatX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetCoordinatX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetCoordinatY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetCoordinatY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetHash">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetHash">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetImageX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetImageX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetImageY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetImageY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetXGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetXGridSpace">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetYGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetYGridSpace">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SaveAs">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodSaveAs">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShortNumber">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodShortNumber">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DisplayPlot">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDisplayPlot">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawAxis">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawAxis">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawCaption">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawCaption">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawPlots">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawPlots">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawXGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawXGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawYGrid">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodDrawYGrid">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GeneratePlot">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGeneratePlot">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetCoordinatX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetCoordinatX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetCoordinatY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetCoordinatY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetHash">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetHash">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetImageX">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetImageX">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetImageY">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetImageY">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetXGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetXGridSpace">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetYGridSpace">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodGetYGridSpace">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SaveAs">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodSaveAs">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ShortNumber">
+		<param name="Local" value="WikiPlot\PlotClass\Plot.html#methodShortNumber">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlot.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Functions">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="wfWikiPlotExtension">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionwfWikiPlotExtension">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeBoolean">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeBoolean">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeColor">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeColor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeInteger">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeInteger">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeMixed">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeMixed">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeString">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeString">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RenderWikiPlot">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionRenderWikiPlot">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="wfWikiPlotExtension">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionwfWikiPlotExtension">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeBoolean">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeBoolean">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeColor">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeColor">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeInteger">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeInteger">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeMixed">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeMixed">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotDeserializeString">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html#functionWikiPlotDeserializeString">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="xml.class.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cache.class.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PlotClass/plot.class.php">
+		<param name="Local" value="WikiPlot\_WikiPlot_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotSettings.php">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constants">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotCachePath">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html#defineWikiPlotCachePath">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotCacheURL">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html#defineWikiPlotCacheURL">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotMaxUnusedAge">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html#defineWikiPlotMaxUnusedAge">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotCacheAge">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html#defineWikiPlotCacheAge">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotCachePath">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html#defineWikiPlotCachePath">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotCacheURL">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html#defineWikiPlotCacheURL">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WikiPlotMaxUnusedAge">
+		<param name="Local" value="WikiPlot\_WikiPlotSettings_php.html#defineWikiPlotMaxUnusedAge">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="xml.class.php">
+		<param name="Local" value="WikiPlot\_xml_class_php.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMLParser">
+		<param name="Local" value="WikiPlot\XMLParser.html">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMLParser Properties">
+		<param name="Local" value="WikiPlot\XMLParser.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Input">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Input">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Parser">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Parser">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Separator">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Separator">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Tag">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Tag">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$TagData">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$TagData">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Tags">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Tags">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Attributes">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Attributes">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Input">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Input">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Parser">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Parser">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Separator">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Separator">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Tag">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Tag">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$TagData">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$TagData">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="$Tags">
+		<param name="Local" value="WikiPlot\XMLParser.html#var$Tags">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMLParser Methods">
+		<param name="Local" value="WikiPlot\XMLParser.html">
+		</OBJECT>
+	<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CloseTag">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodCloseTag">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CreateInputArray">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodCreateInputArray">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CreateTagArray">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodCreateTagArray">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ExplodeInputData">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodExplodeInputData">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetCharData">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodGetCharData">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenTag">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodOpenTag">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Parse">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodParse">
+		</OBJECT>
+		
+</UL>	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMLParser">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodXMLParser">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CloseTag">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodCloseTag">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CreateInputArray">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodCreateInputArray">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CreateTagArray">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodCreateTagArray">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ExplodeInputData">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodExplodeInputData">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetCharData">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodGetCharData">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenTag">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodOpenTag">
+		</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Parse">
+		<param name="Local" value="WikiPlot\XMLParser.html#methodParse">
+		</OBJECT>
+		
+</UL>
+</BODY></HTML>
